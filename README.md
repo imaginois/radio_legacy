@@ -1,4 +1,4 @@
-# Flyd
+# RadIO
 
 The modular, KISS, functional reactive programming library for JavaScript.
 
