@@ -1,5 +1,7 @@
 # RadIO
 
+Rapid Application Development Input/Output
+
 The modular, KISS, functional reactive programming library for JavaScript.
 
 [![Build Status](https://travis-ci.org/paldepind/flyd.svg?branch=master)](https://travis-ci.org/paldepind/flyd)
