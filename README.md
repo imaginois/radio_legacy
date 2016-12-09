@@ -27,6 +27,12 @@ are huge, complex, have a high learning curve and aren't functional enough.
 Flyd is simple and expressive. It has a minimal but powerful core on top of
 which new abstractions can be built modularly.
 
+
+## Environment setup
+* install latest version of Vagrant
+* install latest version of VirtualBox
+* run vagrant plugin install vagrant-vbguest
+
 ## Features
 
 __Main features__
@@ -718,8 +724,3 @@ npm test
 The `npm test` command run three tests: a eslint js style checker test, the test of the core library and the test of the modules. If you want to run only the test of the library `npm run test`.
 
 The API.md file is generated using `npm run docs` (it assumes it has documentation installed globally: `npm i -g documentation`)
-
-
-
-
-
