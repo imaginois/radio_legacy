@@ -2,7 +2,7 @@
 
 Rapid Application Development Input/Output
 
-The modular, KISS, functional reactive programming library for JavaScript.
+The modular, SOLID, KISS, functional reactive programming library for JavaScript.
 
 [![Build Status](https://travis-ci.org/paldepind/flyd.svg?branch=master)](https://travis-ci.org/paldepind/flyd)
 [![Coverage Status](https://coveralls.io/repos/paldepind/flyd/badge.svg?branch=master)](https://coveralls.io/r/paldepind/flyd?branch=master)
