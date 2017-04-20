@@ -174,20 +174,27 @@ nav a:hover {
 .header-info h4 {
     float: left;
     width: 48%;
-    margin: 0.2rem;
+    margin: 0.2rem 0 0;
     padding: 0.14rem;
+}
+
+.header-info h1 i.fa,
+.header-info h2 i.fa,
+.header-info h3 i.fa,
+.header-info h4 i.fa {
+    margin: 5px 10px 0 0;
 }
 
 .header-info h1 {
     font-size: 1.3em;
 }
 .header-info h2 {
-    font-size: 1.1em;
-    font-weight: normal
+    font-size: 1em;
 }
 
 /*main-container styles*/
 .stripes {}
+
 .stripes > section {
     /* width: 100%; */
     margin-bottom: 4px;
@@ -206,7 +213,7 @@ nav a:hover {
     float: left;
     margin-right: -135px;
 }
-.stripes > section > header i {
+.stripes > section i.fa {
     margin-bottom: 10px;
     display: block;
 }
@@ -232,6 +239,9 @@ nav a:hover {
     background: #444;
 }
 
+.stripes .static > article li {
+    background: #333
+}
 
 
 
@@ -248,7 +258,7 @@ nav a:hover {
    ========================================================================== */
 
 @media screen and (min-width: 480px) {
-    
+
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
