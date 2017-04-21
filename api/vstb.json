@@ -3,9 +3,9 @@
     { "api_version": 1, "title": "vstb fake back office", "author": "mderibanov" }
   ],
   "stripes": [
-    { "stripeName": "continuewatching" }
-    { "stripeName": "newtitles" }
-    { "stripeName": "alltitles" }
+    { "stripeName": "continuewatching" },
+    { "stripeName": "newtitles" },
+    { "stripeName": "alltitles" },
     { "stripeName": "livetv" }
   ],
   "comments": [
