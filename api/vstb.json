@@ -1,0 +1,15 @@
+{
+  "info": [
+    { "api_version": 1, "title": "vstb fake back office", "author": "mderibanov" }
+  ],
+  "stripes": [
+    { "stripeName": "continuewatching" }
+    { "stripeName": "newtitles" }
+    { "stripeName": "alltitles" }
+    { "stripeName": "livetv" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
