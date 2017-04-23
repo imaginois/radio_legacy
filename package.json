@@ -13,6 +13,6 @@
   "author": "Metodi Deribanov",
   "license": "ISC",
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "flyd": "^0.2.4"
   }
 }

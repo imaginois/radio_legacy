@@ -1,0 +1,22 @@
+{
+  "name": "radio",
+  "description": "Radio project dependency management",
+  "main": "index.js",
+  "authors": [
+    "Metodi Deribanov"
+  ],
+  "license": "ISC",
+  "homepage": "radio.local",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.3",
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -12,9 +12,9 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/lib/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
 
@@ -44,11 +44,11 @@
             </header>
         </div>
 
-        <div class="main-container">
+        <div class="main-container" id="view">
             <div class="main wrapper clearfix">
                 <aside>
                     <h3>That Awkward Moment full movie</h3>
-                    <p><iframe width="100%" height="300px" src="https://www.youtube-nocookie.com/embed/ANZ2iX2w2H4?controls=0&amp;showinfo=0&amp;autoplay=0" frameborder="0" allowfullscreen></iframe></p>
+                    <!-- <p><iframe width="100%" height="300px" src="https://www.youtube-nocookie.com/embed/ANZ2iX2w2H4?controls=0&amp;showinfo=0&amp;autoplay=0" frameborder="0" allowfullscreen></iframe></p> -->
                 </aside>
 
                 <article class="stripes">
@@ -107,6 +107,6 @@
             </footer>
         </div>
 
-        <script src="js/main.js"></script>
+        <script data-main="js/init.js" src="/bower_components/requirejs/require.js"></script>
     </body>
 </html>
