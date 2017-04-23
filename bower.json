@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "requirejs": "^2.3.3",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "snabbdom": "^0.6.7"
   }
 }

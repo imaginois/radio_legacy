@@ -9,7 +9,7 @@ define([
 	function Router () {
       var routes = {};
       var events = [];
-      var el = document.querySelector(cfg.app.mainContainerSelector);
+      var el = $(cfg.app.mainContainerSelector);
       var ctx = {
         on: function (selector, evt, handler) {
           events.push([selector, evt, handler]);
@@ -50,7 +50,7 @@ define([
       }
 
       function router () {
-        el = el || document.getElementById('view');
+        el = el || $('#view');
 
         removeEventListeners();
 
@@ -68,7 +68,7 @@ define([
 
           route.onRefresh(function () {
             removeEventListeners();
-            var html = template.tmpl(route.templateId, ctrl);
+            // var html = template.tmpl(route.templateId, ctrl);
             console.log(html)
             log.info("Route ", route.templateId, ctrl);
             addEventListeners();

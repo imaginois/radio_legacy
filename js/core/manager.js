@@ -2,9 +2,12 @@ define([
 	'config',
 	'module',
 	'core/router',
+	'core/dom',
+	'core/dom',
 	'helper/log',
+	'helper/base',
 	'node_modules/flyd/flyd.js'
-], function (cfg, module, router, log, flyd) {
+], function (cfg, module, router, dom, log, base, flyd) {
 	'use strict'
 
 	var defaultRoutes = [
@@ -29,6 +32,11 @@ define([
 		function init () {
 			setRoutes();
 			log.info('Manager Init Finished', Date.now());
+
+
+			console.log(dom)
+
+
 		};
 
 		function setRoutes () {
