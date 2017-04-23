@@ -3,7 +3,6 @@ define([
 	'module',
 	'core/router',
 	'core/dom',
-	'core/dom',
 	'helper/log',
 	'helper/base',
 	'node_modules/flyd/flyd.js'
@@ -33,10 +32,16 @@ define([
 			setRoutes();
 			log.info('Manager Init Finished', Date.now());
 
+			var tpl = (new dom()).dom;
+			console.log(tpl)
 
-			console.log(dom)
+				var container = $(cfg.app.mainContainerSelector);
 
-
+				var vnode = tpl.h('div#container.two.classes', {style: {background: "red"}}, [
+				  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
+				  ' and this is just normal text',
+				]);
+				tpl.patch(container, vnode); 
 		};
 
 		function setRoutes () {

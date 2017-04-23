@@ -1,14 +1,15 @@
 define(function (require) {
 	'use strict'
 
-	var snabbdom = require('snabbdom');
+	var cfg = require('config');
+	var snabbdom = require('/bower_components/snabbdom/dist/snabbdom');
 	var patch = snabbdom.init([ // Init patch function with chosen modules 
-	  require('snabbdom/modules/class').default, // makes it easy to toggle classes 
-	  require('snabbdom/modules/props').default, // for setting properties on DOM elements 
-	  require('snabbdom/modules/style').default, // handles styling on elements with support for animations 
-	  require('snabbdom/modules/eventlisteners').default, // attaches event listeners 
+	  require('/bower_components/snabbdom/dist/snabbdom-class').default, // makes it easy to toggle classes 
+	  require('/bower_components/snabbdom/dist/snabbdom-props').default, // for setting properties on DOM elements 
+	  require('/bower_components/snabbdom/dist/snabbdom-style').default, // handles styling on elements with support for animations 
+	  require('/bower_components/snabbdom/dist/snabbdom-eventlisteners').default, // attaches event listeners 
 	]);
-	var h = require('snabbdom/h').default; // helper function for creating vnodes 
+	var h = require('/bower_components/snabbdom/dist/h').default; // helper function for creating vnodes 
 	 
 
 	function Dom () {
@@ -17,5 +18,5 @@ define(function (require) {
 		this.dom.h = h;
 	}
     
-    return new Dom();
+    return Dom;
 });
