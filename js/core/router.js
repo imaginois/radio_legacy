@@ -1,8 +1,9 @@
 define([
 	'config',
-	'core/manager',
+  'core/manager',
+	'core/template',
 	'helper/log'
-], function (cfg, manager, log) {
+], function (cfg, manager, template, log) {
 	'use strict'
 
 	function Router () {
@@ -67,6 +68,8 @@ define([
 
           route.onRefresh(function () {
             removeEventListeners();
+            var html = template.tmpl(route.templateId, ctrl);
+            console.log(html)
             log.info("Route ", route.templateId, ctrl);
             addEventListeners();
           });

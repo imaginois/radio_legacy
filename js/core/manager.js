@@ -14,12 +14,13 @@ define([
   			console.log("load Asset")
 		}],
 		['/epg', 'epg', function () {
-		      this.counter = 0;
-		      this.$on('#continuewatching', 'click', function () {
-		        this.counter += 1;
-		        console.log(this.counter)
-		        this.$refresh();
-		      }.bind(this));
+		    this.counter = 0;
+  			this.heading = 'Hello EPG!';
+			this.$on('#continuewatching', 'click', function () {
+				this.counter += 1;
+				console.log(this.counter)
+				this.$refresh();
+			}.bind(this));
 		}],
 		['*', 'error404']
 	]
