@@ -1,3 +1,5 @@
+
+
 require.config({
 	waitSeconds: 60,
 	urlArgs: function(id, url) {
@@ -11,9 +13,28 @@ require.config({
 });
 
 require([
+    'config',
     'core/manager'
-], function (manager) {
-    "use strict";
+], function (cfg, manager) {
 
-	var app = new manager();
+    var backstage = { test : "hmmmm"};
+    var init = function () {
+        return App = new manager();
+    }
+
+    if(cfg.LOCAL){
+        with (backstage) {
+            with (window) {
+                init();
+                // eval(App); 
+            }
+        }
+    } else {
+        init();
+    }
+
+
+
+                console.log(backstage);
+
 });
