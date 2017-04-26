@@ -29,7 +29,7 @@ which new abstractions can be built modularly.
 __Main features__
 
 * **Monads**
-* Purely functional
+* **Purely functional**
 * __Simple but powerful__. Less is more! Radio provides combinable observable
   streams as the basic building block. This minimal core is less than 200 SLOC
   which makes the library transparent – end users can realistically get a full
