@@ -2,17 +2,18 @@
 
 Rapid Application Development Input/Output
 
-The modular, SOLID, KISS, functional reactive programming framework for JavaScript.
+The modular, SOLID, KISS, functional reactive programming framework for JavaScript, optimized for performance and testability.
 
 # Table of contents
 
-* [Introduction](#introduction)
-* [Features](#features)
-* [Examples](#examples)
-* [Tutorial](#tutorial)
-* [API](#api)
-* [Modules](#modules)
-* [Misc](#misc)
+* Introduction
+* Features
+* Examples
+* Tutorial
+* API
+* Wiki
+* Code guidelines
+* Contribution guidelines
 
 ## Introduction
 
@@ -27,6 +28,8 @@ which new abstractions can be built modularly.
 
 __Main features__
 
+* **Monads**
+* Purely functional
 * __Simple but powerful__. Less is more! Radio provides combinable observable
   streams as the basic building block. This minimal core is less than 200 SLOC
   which makes the library transparent – end users can realistically get a full
@@ -46,8 +49,7 @@ __Other features__
   [Ramda](http://ramdajs.com/) and [transducers.js](https://github.com/jlongster/transducers.js).
 * Complies to the [fantasy land](https://github.com/fantasyland/fantasy-land)
   applicative specification.
-* [Elegant support for promises](#using-promises-for-asynchronous-operations).
-* [Atomic updates](#atomic-updates).
+* Elegant support for promises
 
 ## Examples
 
@@ -293,3 +295,15 @@ ends. For an example, take a look at the implementation of
 
 
 ## API
+
+## Wiki
+
+## Code Guidelines
+
+### Contribution guidelines ###
+TBD
+
+### FAQ ###
+
+### Contacts ###
+Questions and suggestions go to **mderibanov@minervaderibanov.com**
