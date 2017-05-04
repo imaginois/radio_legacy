@@ -29,68 +29,239 @@
       </script>
 
 
-        <div class="wrapper">
-            <header>
-              <nav>
-                <a href="#" id="logo">
-                  <img src="http://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333"/>
-                </a>
-                
-                <div class="left-menu">
-                  <h5>Browse<i class="fa fa-caret-down"></i></h5>
-                  <h5>Kids</h5>
-                  <h5>DVD</h5>
-                </div><!--left-menu end-->
-                <div class="right-menu">
-                  <h5><i class="fa fa-search"></i>Search</h5>
-                  <div class="user">
-                    <img class="user-img" src="https://d3iw72m71ie81c.cloudfront.net/male-5.jpg"/>
-                    <h5>John<i class="fa fa-caret-down"></i></h5>
-                  </div><!--user end-->
-                </div><!--right-menu-end-->
-              </nav>
-              <div class="description">
-                <img class="show-logo" src="http://static.tumblr.com/8y60per/DXKnmgo4g/dd_logo2.png"/>
-                <p>Blinded as a young boy, Matt Murdock fights injustice by day as a lawyer and by night as the Super Hero Daredevil in Hell's Kitchen, New York City.</p>
-                <button class="play"><i class="fa fa-play"></i> TRAILER</button>
-                <button class="add"><i class="fa fa-plus"></i> MY LIST</button>
-              </div><!--description end-->
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <div class="header-info">
+                    <h1 class="title">American pie</h1>
+                    <h1 class="sub-title">
+                        <i class="fa fa-cc"></i>
+                        <i class="fa fa-address-card"></i>
+                        <i class="fa fa-battery-three-quarters"></i>
+                        <i class="fa fa-bookmark"></i>
+                        <i class="fa fa-briefcase"></i>
+                    </h1>
+                    <h2 class="sub-title">Drunk highschool students</h2>
+                    <h2 class="sub-title">
+                    2008 Comedy/Adventure
+                    </h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Logout</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </nav>
             </header>
-              <main id="view">
-                <section>
-                  <h3>Continue Watching for John</h3>
-                  <div class="multiple-items">
-                    <img src="http://netflixlife.com/files/2015/08/the-fall.jpg"/>
-                    <img src="https://art-s.nflximg.net/f2761/d583c2bd2bfe7a6ce50890ae43af3fc7bd8f2761.jpg"/>
-                    <img src="https://i.ytimg.com/vi/7DbSyhXLTGQ/maxresdefault.jpg"/>
-                    <img src="https://i.ytimg.com/vi/l4eEcf0Pauo/maxresdefault.jpg"/>
-                    <img src="https://i.ytimg.com/vi/riLgCIvE9aU/maxresdefault.jpg"/>
-                    <img src="http://media.comicbook.com/2016/07/daredevil-netflix-190285.jpg"/>
-                  </div><!--multiple-items-->
-                  <h3>Trending Now</h3>
-                  <div class="multiple-items">
-                    <img src="https://www.whats-on-netflix.com/wp-content/uploads/2015/11/ftwd-featured.jpg"/>
-                    <img src="https://pmcdeadline2.files.wordpress.com/2014/06/house-of-cards-seaosn-2__140603234815.jpg"/>
-                    <img src="http://www.underbellyofsunshine.com/wp-content/uploads/2015/04/Bojack%20Horseman.jpg"/>
-                    <img src="http://www.themarysue.com/wp-content/uploads/2015/10/maxresdefault5.jpg"/>
-                    <img src="https://i.ytimg.com/vi/Ymw5uvViqPU/maxresdefault.jpg"/>
-                    <img src="http://media.comicbook.com/2016/07/daredevil-netflix-190285.jpg"/>
-                  </div><!--multiple-items-->
-                  <h3>TV Shows</h3>
-                  <div class="tv-shows">
-                    <img src="http://cdn.collider.com/wp-content/uploads/2015/10/master-of-none-poster-image.jpg"/>
-                    <img src="http://oyster.ignimgs.com/wordpress/stg.ign.com/2016/11/netflix-lemony-snicket-unfortunate-eventes-poster.jpg"/>
-                    <img src="http://dl9fvu4r30qs1.cloudfront.net/db/88/4cee42424bf685282f3cb6c0686a/my-beautiful-broken-mind-poster.jpg"/>
-                    <img src="http://www.etonline.com/media/photo/2016/10/24277797/1900_Gilmore_Girls_Revival_Fall.jpg"/>
-                    <img src="http://cdn.collider.com/wp-content/uploads/marco-polo-poster.jpg"/>
-                    <img src="http://abduzeedo.com/sites/default/files/originals/6f1c7f40664543.5787e03bf042c.jpg"/>
-                    <img src="http://www.ramascreen.com/wp-content/uploads/2014/07/Hemlock-Grove-season-2-poster1.jpg"/>
-                    <img src="http://cdn.movieweb.com/img.site/PHfxK9hXDzmVjh_2_l.jpg"/>
-                    <img src="http://screencrush.com/files/2015/11/preview.jpg"/>
-                  </div><!--tv-shows end-->
-                </section>
-              </main>
-            </div><!--wrapper end-->
+        </div>
+
+        <div class="main-container" id="view">
+            <div class="main wrapper clearfix">
+                <aside>
+                    <h3>That Awkward Moment full movie</h3>
+                    <!-- <p><iframe width="100%" height="300px" src="https://www.youtube-nocookie.com/embed/ANZ2iX2w2H4?controls=0&amp;showinfo=0&amp;autoplay=0" frameborder="0" allowfullscreen></iframe></p> -->
+                </aside>
+
+                <article class="stripes">
+                    <section id="continuewatching" class="clearfix">
+                        <header><i class="fa fa-camera-retro fa-4x"></i>
+                            Keep Watching
+                        </header><!-- /header -->
+                        <article>
+                          <div class="items">
+                            <div class="image-wrapper">
+                                <img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />
+                                <div class="poster-title">Lorem ipsum dolor sit amet</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlGi1Z9Muxvxz2WyRaAfKbmVYCn3nH0vvaw_LU5pyvfMxVAmNB" alt="" />
+                                <div class="poster-title">vitae dicta sunt explicabo</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjyD_W97_8VCTAqkGE1NX56S8d5783fKhT_-Q9wpDXR7HVsOjODQ" alt="" />
+                                <div class="poster-title">quaerat voluptatem</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7_0toJHp2ECSTtR2LxUOK5r9MMnwJTIG0VcKquihFQmNT411UJw" alt="" />
+                                <div class="poster-title">non numquam eius modi tempora</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5ZGvxU1Kw3dgjV-Vxi_u4DtoUy-qtn1bcmbeNbjBPnqLvxzqug" alt="" />
+                                <div class="poster-title">minim veniam, quis nostrud</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRglxVWeeh8xfNIRM6nN6cDoaRfpSx8158MWzb7n2e9vnJKq_P6" alt="" />
+                                <div class="poster-title">eos et accusamus et iusto odio </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsnZBBXdhpf1_qCVu08sQh95unQ65UTabUs5QoLivkAcaj7PVFA" alt="" />
+                                <div class="poster-title">qui blanditiis praesentium voluptatum</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTB83A4eeAEgcHIH0WBRcEcYoYWCRtbZ9rId1ZZHrLv6OoYoRIC4A" alt="" />
+                                <div class="poster-title">qui officia deserunt mollitia animi</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJAyk3csTXu1Oe7el5m2NnlKHxxXuq1GKCIJuBecpUMv75qnWpVg" alt="" />
+                                <div class="poster-title">dolorem ipsum</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQFSuckpbQWSw1JYryscwhYXt9L-PYN6sxl2Jds3MYe3HGwOgZ" alt="" />
+                                <div class="poster-title">dolor sit amet</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3qP9OlkP6TaWRtO-RAj7J3JjFM9a8iJBtEcPWnXLbjXlWZrpB" alt="" />
+                                <div class="poster-title">voluptatem sequi nesciunt</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3mdPQMucEN9P6L7xDfxZo_ARDmNQWo4L95OwXEE_xf7mcfUVW" alt="" />
+                                <div class="poster-title">dolores eos qui</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS-MSs0i-X3IwGu8gkgt-L5iUJe3XDY2lnBfS7hccIu_svK86e1" alt="" />
+                                <div class="poster-title">Duis aute irure</div>
+                            </div>
+                          </div>
+                          <div id="left" class="button-overlay left">&#9664;</div>
+                          <div id="right" class="button-overlay right">&#9654;</div>
+                        </article>
+                    </section>
+                    <section id="newtitles" class="clearfix">
+                        <header><i class="fa fa-bell fa-4x"></i>
+                            New Titles
+                        </header><!-- /header -->
+                        <article>
+                          <div class="items">
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQFSuckpbQWSw1JYryscwhYXt9L-PYN6sxl2Jds3MYe3HGwOgZ" alt="" />
+                                <div class="poster-title">Sed ut perspiciatis</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsnZBBXdhpf1_qCVu08sQh95unQ65UTabUs5QoLivkAcaj7PVFA" alt="" />
+                                <div class="poster-title">Ut enim ad minima</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />
+                                <div class="poster-title">non numquam</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTB83A4eeAEgcHIH0WBRcEcYoYWCRtbZ9rId1ZZHrLv6OoYoRIC4A" alt="" />
+                                <div class="poster-title">Neque porro </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7_0toJHp2ECSTtR2LxUOK5r9MMnwJTIG0VcKquihFQmNT411UJw" alt="" />
+                                <div class="poster-title">aspernatur aut odit</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlGi1Z9Muxvxz2WyRaAfKbmVYCn3nH0vvaw_LU5pyvfMxVAmNB" alt="" />
+                                <div class="poster-title">Duis aute irure</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3qP9OlkP6TaWRtO-RAj7J3JjFM9a8iJBtEcPWnXLbjXlWZrpB" alt="" />
+                                <div class="poster-title">voluptate velit esse</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjyD_W97_8VCTAqkGE1NX56S8d5783fKhT_-Q9wpDXR7HVsOjODQ" alt="" />
+                                <div class="poster-title">voluptatem sequi</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5ZGvxU1Kw3dgjV-Vxi_u4DtoUy-qtn1bcmbeNbjBPnqLvxzqug" alt="" />
+                                <div class="poster-title">minima veniam</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS-MSs0i-X3IwGu8gkgt-L5iUJe3XDY2lnBfS7hccIu_svK86e1" alt="" />
+                                <div class="poster-title">aspernatur aut</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJAyk3csTXu1Oe7el5m2NnlKHxxXuq1GKCIJuBecpUMv75qnWpVg" alt="" />
+                                <div class="poster-title">sequi nesciunt</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRglxVWeeh8xfNIRM6nN6cDoaRfpSx8158MWzb7n2e9vnJKq_P6" alt="" />
+                                <div class="poster-title">dolore eu fugiat</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3mdPQMucEN9P6L7xDfxZo_ARDmNQWo4L95OwXEE_xf7mcfUVW" alt="" />
+                                <div class="poster-title">Duis aute irure</div>
+                            </div>
+                          </div>
+                          <div id="left" class="button-overlay left">&#9664;</div>
+                          <div id="right" class="button-overlay right">&#9654;</div>
+                        </article>
+                    </section>
+                    <section id="alltitles" class="clearfix static">
+                        <header><i class="fa fa-asterisk fa-4x"></i>
+                            All Titles
+                        </header><!-- /header -->
+                        <article>
+                          <div class="items">
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjyD_W97_8VCTAqkGE1NX56S8d5783fKhT_-Q9wpDXR7HVsOjODQ" alt="" />
+                                <div class="poster-title">pain, but because occasionally circumstances</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTB83A4eeAEgcHIH0WBRcEcYoYWCRtbZ9rId1ZZHrLv6OoYoRIC4A" alt="" />
+                                <div class="poster-title">Nemo enim ipsam voluptatem quia</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRglxVWeeh8xfNIRM6nN6cDoaRfpSx8158MWzb7n2e9vnJKq_P6" alt="" />
+                                <div class="poster-title">magnam aliquam quaerat voluptatem</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3mdPQMucEN9P6L7xDfxZo_ARDmNQWo4L95OwXEE_xf7mcfUVW" alt="" />
+                                <div class="poster-title">No one rejects, dislikes</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsnZBBXdhpf1_qCVu08sQh95unQ65UTabUs5QoLivkAcaj7PVFA" alt="" />
+                                <div class="poster-title">find fault with a man who chooses</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlGi1Z9Muxvxz2WyRaAfKbmVYCn3nH0vvaw_LU5pyvfMxVAmNB" alt="" />
+                                <div class="poster-title">circumstances occur in which toil and pain</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3qP9OlkP6TaWRtO-RAj7J3JjFM9a8iJBtEcPWnXLbjXlWZrpB" alt="" />
+                                <div class="poster-title">magnam aliquam quaerat voluptatem</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJAyk3csTXu1Oe7el5m2NnlKHxxXuq1GKCIJuBecpUMv75qnWpVg" alt="" />
+                                <div class="poster-title">No one rejects, dislikes</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7_0toJHp2ECSTtR2LxUOK5r9MMnwJTIG0VcKquihFQmNT411UJw" alt="" />
+                                <div class="poster-title">consectetur, adipisci velit, sed quia non numquam</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQFSuckpbQWSw1JYryscwhYXt9L-PYN6sxl2Jds3MYe3HGwOgZ" alt="" />
+                                <div class="poster-title">quisquam est, qui dolorem</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5ZGvxU1Kw3dgjV-Vxi_u4DtoUy-qtn1bcmbeNbjBPnqLvxzqug" alt="" />
+                                <div class="poster-title">Sed ut perspiciatis unde omnis</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />
+                                <div class="poster-title">aspernatur aut odit aut fugit, sed</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS-MSs0i-X3IwGu8gkgt-L5iUJe3XDY2lnBfS7hccIu_svK86e1" alt="" />
+                                <div class="poster-title">voluptatem accusantium doloremque laudantium</div>
+                            </div>
+                          </div>
+                          <div id="left" class="button-overlay left">&#9664;</div>
+                          <div id="right" class="button-overlay right">&#9654;</div>
+                        </article>
+                    </section>
+                </article>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>footer</h3>
+            </footer>
+        </div>
 
         <script data-main="js/init.js" src="/bower_components/requirejs/require.js"></script>
     </body>

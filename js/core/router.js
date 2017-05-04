@@ -69,7 +69,7 @@ define([
           route.onRefresh(function () {
             removeEventListeners();
             // var html = template.tmpl(route.templateId, ctrl);
-            console.log(html)
+            // console.log(html)
             log.info("Route ", route.templateId, ctrl);
             addEventListeners();
           });
