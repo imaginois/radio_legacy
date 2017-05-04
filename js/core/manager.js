@@ -6,7 +6,7 @@ define([
 	'helper/log',
 	'helper/base',
 	'node_modules/flyd/flyd.js'
-], function (cfg, module, router, dom, log, base, flyd) {
+], function (cfg, module, router, dom, log, base, radio) {
 	'use strict'
 
 	var defaultRoutes = [
@@ -41,7 +41,7 @@ define([
 				  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
 				  ' and this is just normal text',
 				]);
-				tpl.patch(container, vnode); 
+				// tpl.patch(container, vnode); 
 		};
 
 		function setRoutes () {
