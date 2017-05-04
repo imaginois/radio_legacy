@@ -29,19 +29,30 @@ define([
 
 	function Manager () {
 		function init () {
-			setRoutes();
+			var mousemove = radio.stream();
+			var tpl = (new dom()).dom;
+			
+			setRoutes();			
+
 			log.info('Manager Init Finished', Date.now());
 
-			var tpl = (new dom()).dom;
-			console.log(tpl)
+			var container = $(cfg.app.mainContainerSelector);
 
-				var container = $(cfg.app.mainContainerSelector);
+			var vnode = tpl.h('div#container.two.classes', {style: {background: "red"}}, [
+			  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
+			  ' and this is just normal text',
+			]);
+			// tpl.patch(container, vnode); 
 
-				var vnode = tpl.h('div#container.two.classes', {style: {background: "red"}}, [
-				  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
-				  ' and this is just normal text',
-				]);
-				// tpl.patch(container, vnode); 
+			document.addEventListener('mousemove', mousemove);
+
+			radio.on(function (mouseEvents) {
+				if ($('.selected')) {
+					$('.selected').classList.remove('selected');
+				}
+				mouseEvents.target.classList.add('selected')
+
+			}, mousemove)
 		};
 
 		function setRoutes () {
