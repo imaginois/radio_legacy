@@ -1,11 +1,8 @@
 {
   "name": "radio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Rapid Application Development Input/Output",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "js/init.js",
   "repository": {
     "type": "git",
     "url": "git@bitbucket.org:minervanetworks/radio.git"
@@ -13,7 +10,7 @@
   "scripts": {
     "test-lib": "mocha",
     "test": "eslint lib/ test/ module/ && mocha -R dot test/*.js module/**/test/*.js",
-    "docs": "documentation -f md js/core/manager.js > app.md",
+    "docs": "documentation readme js/ --section=Wiki && documentation -f md node_modules/flyd/lib/index.js > API.md && documentation build js/** -f html -o docs",
     "perf": "./perf/run-benchmarks",
     "post-to-coveralls-io": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "build": "browserify -s flyd lib/index.js > flyd.js && uglifyjs flyd.js -o flyd.min.js"
