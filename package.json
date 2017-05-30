@@ -10,6 +10,14 @@
     "type": "git",
     "url": "git@bitbucket.org:minervanetworks/radio.git"
   },
+  "scripts": {
+    "test-lib": "mocha",
+    "test": "eslint lib/ test/ module/ && mocha -R dot test/*.js module/**/test/*.js",
+    "docs": "documentation -f md js/core/manager.js > app.md",
+    "perf": "./perf/run-benchmarks",
+    "post-to-coveralls-io": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "build": "browserify -s flyd lib/index.js > flyd.js && uglifyjs flyd.js -o flyd.min.js"
+  },
   "author": "Metodi Deribanov",
   "license": "ISC",
   "dependencies": {

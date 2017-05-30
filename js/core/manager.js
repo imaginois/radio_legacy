@@ -9,6 +9,21 @@ define([
 ], function (cfg, module, router, dom, log, base, radio) {
 	'use strict'
 
+// /////////////////////////// API ///////////////////////////////// //
+
+/**
+ * Creates a new stream
+ *
+ * __Signature__: `a -> Stream a`
+ *
+ * @name flyd.stream
+ * @param {*} initialValue - (Optional) the initial value of the stream
+ * @return {stream} the stream
+ *
+ * @example
+ * var n = flyd.stream(1); // Stream with initial value `1`
+ * var s = flyd.stream(); // Stream with no initial value
+ */
 	var defaultRoutes = [
 		['/', 'home'],
 		['/asset', 'asset', function () {
@@ -55,12 +70,22 @@ define([
 			}, mousemove)
 		};
 
-		function setRoutes () {
+
+		/**
+		 * Initializes the routing object for the application
+		 * Multiple instances of the app can run different
+		 * instances of the routes object
+		 */
+		function setRoutes (args) {
 			var routes = routes || defaultRoutes;
 			routes.map(addRoute);
 			log.info(router);
 		}
 
+		/**
+		 * [addRoute description]
+		 * @param {[type]} routeConfig [description]
+		 */
 		function addRoute (routeConfig) {
 			router.route.apply(router, routeConfig);
 		}
