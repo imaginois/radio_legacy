@@ -8,7 +8,7 @@
     "url": "git@bitbucket.org:minervanetworks/radio.git"
   },
   "scripts": {
-    "test": "eslint lib/ test/ module/ && mocha -R dot test/*.js module/**/test/*.js",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "docs": "documentation readme js/ --section=Wiki && documentation build -f md node_modules/flyd/lib/index.js > API.md && documentation build js/** -f html -o docs"
   },
   "author": "Metodi Deribanov",
@@ -29,8 +29,14 @@
     "tiny-lr": "^1.0.4"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
     "gulp-jshint": "^2.0.4",
     "intern": "^4.0.0-alpha.4",
-    "jshint": "^2.9.4"
+    "jasmine": "^2.6.0",
+    "jshint": "^2.9.4",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-requirejs": "^1.1.0",
+    "phantomjs": "^2.1.7"
   }
 }
