@@ -1,5 +1,5 @@
 define(function (require) {
-	'use strict'
+	'use strict';
 
 	var cfg = require('config');
 	var snabbdom = require('vendor/snabbdom/dist/snabbdom');

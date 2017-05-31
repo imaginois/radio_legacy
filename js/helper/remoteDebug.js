@@ -93,7 +93,7 @@ define([
             };
 
         if(cfg.ENVIRONMENT_LOCAL && cfg.ENVIRONMENT_DEBUG){
-            // timing.printSimpleTable(); // print the timings table on app startup
+            timing.printSimpleTable(); // print the timings table on app startup
         }
         return timing;
 
@@ -107,36 +107,41 @@ define([
             info: function (message) {
                 var data = self.api.dataTransformer(message, 'info');
 
-                if (cfg.REMOTE_DEBUG)
+                if (cfg.REMOTE_DEBUG) {
                     self.api.post(data);
+                }
             },
 
             error: function (message) {
                 var data = self.api.dataTransformer(message, 'error');
 
-                if (cfg.REMOTE_DEBUG)
+                if (cfg.REMOTE_DEBUG) {
                     self.api.post(data);
+                }
             },
 
             keydown: function (message) {
                 var data = self.api.dataTransformer(message, 'keydown');
 
-                if (cfg.REMOTE_DEBUG)
+                if (cfg.REMOTE_DEBUG) {
                     self.api.post(data);
+                }
             },
 
             keypress: function (message) {
                 var data = self.api.dataTransformer(message, 'keypress');
 
-                if (cfg.REMOTE_DEBUG)
+                if (cfg.REMOTE_DEBUG) {
                     self.api.post(data);
+                }
             },
 
             xhr: function (message) {
                 var data = self.api.dataTransformer(message, 'xhr');
 
-                if (cfg.REMOTE_DEBUG)
+                if (cfg.REMOTE_DEBUG) {
                     self.api.post(data);
+                }
             },
         };
 
@@ -163,10 +168,11 @@ define([
             stringify: function (o) {
                 var seen = [];
                 return JSON.stringify(o, function(key, val) {
-                    if (typeof val == "object") {
-                        if (seen.indexOf(val) >= 0)
+                    if (typeof val === "object") {
+                        if (seen.indexOf(val) >= 0) {
                             return;
-                        seen.push(val)
+                        }
+                        seen.push(val);
                     }
                     return val;
                 });
@@ -184,20 +190,23 @@ define([
             },
             get : function () {
                 $.get(remoteDebugUrl, function (response) {
-                    if (cfg.REMOTE_DEBUG_LOG_LEVEL > 2)
+                    if (cfg.REMOTE_DEBUG_LOG_LEVEL > 2) {
                         console.info(JSON.parse(response));
+                    }
                 });
             },
             post: function (data) {
                 var send = function () {
                     $.post(remoteDebugUrl, data)
                         .done(function (response) {
-                            if (cfg.REMOTE_DEBUG_LOG_LEVEL > 2)
+                            if (cfg.REMOTE_DEBUG_LOG_LEVEL > 2) {
                                 console.info(response);
+                            }
                         })
                         .fail(function (response) {
-                            if (cfg.REMOTE_DEBUG_LOG_LEVEL > 0)
+                            if (cfg.REMOTE_DEBUG_LOG_LEVEL > 0) {
                                 console.error("Sending remote log failed ", response);
+                            }
                         });
                 };
                 setTimeout(send, 1000);
@@ -211,9 +220,8 @@ define([
             keypress: this.methods.keypress,
             keydown : this.methods.keydown,
             timings : new logWindowTimings(window)
-        }
-
-    };
+        };
+    }
 
     var bindEvents = function(){
         // window.onerror = function (errorMsg, url, lineNumber, column, errorObj) {
@@ -262,6 +270,6 @@ define([
     };
 
     bindEvents();
-    var log;
-    return log = new Logger();
+    var log = new Logger();
+    return log;
 });

@@ -14,7 +14,23 @@
   "author": "Metodi Deribanov",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^2.2.2",
     "docco": "^0.7.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "tiny-lr": "^1.0.4"
+  },
+  "devDependencies": {
+    "gulp-jshint": "^2.0.4",
+    "intern": "^4.0.0-alpha.4",
+    "jshint": "^2.9.4"
   }
 }

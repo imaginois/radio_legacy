@@ -19,7 +19,7 @@ require.config({
 	urlArgs: function(id, url) {
         var args = 'v=1';
         if (url.indexOf('view.html') !== -1) {
-            args = 'v=2'
+            args = 'v=2';
         }
 
         return (url.indexOf('?') === -1 ? '?' : '&') + args;
@@ -32,5 +32,5 @@ require([
 ], function (manager) {
     "use strict";
 
-	var app = new manager();
+	new manager();
 });

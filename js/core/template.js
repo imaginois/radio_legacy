@@ -3,7 +3,7 @@ define([
 	'core/manager',
 	'helper/log'
 ], function (cfg, manager, log) {
-	'use strict'
+	'use strict';
 	
 	// Simple JavaScript Templating
 	// John Resig - http://ejohn.org/ - MIT Licensed

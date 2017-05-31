@@ -4,11 +4,10 @@ define([
 	'core/template',
 	'helper/log'
 ], function (cfg, manager, template, log) {
-	'use strict'
+	'use strict';
   
 	function Router () {
       var routes = {};
-      var events = [];
       var el = $(cfg.app.mainContainerSelector);
 
       /**

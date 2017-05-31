@@ -1,7 +1,7 @@
 define([
 	'config',
 ], function (cfg) {
-	'use strict'
+	'use strict';
 
 	// TODO: Provide different interfaces for different 
 	// loggers, i.e. remoteDebug, socketDebug
@@ -31,7 +31,7 @@ define([
 			info : logInfo,
 			warn : logWarn,
 			error: logError,
-		}
+		};
 	}
     
     return new Log();
