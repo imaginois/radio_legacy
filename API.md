@@ -329,7 +329,7 @@ var addToNumbers1 = flyd.map(add, numbers1);
 var added = addToNumbers1.ap(numbers2);
 ```
 
-Returns **[stream](https://nodejs.org/api/stream.html)** a new stream with the functions applied to values
+Returns **[stream](https://nodejs.org/api/stream.html)** a new stram with the functions applied to values
 
 ## stream.toString
 

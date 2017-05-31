@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
-    "docs": "documentation readme js/ --section=Wiki && documentation build -f md node_modules/flyd/lib/index.js > API.md && documentation build js/** -f html -o docs"
+    "docs": "./node_modules/.bin/documentation readme js/ --section=Wiki && ./node_modules/.bin/documentation build -f md ./bower_components/flyd/lib/index.js > API.md && ./node_modules/.bin/documentation build js/** -f html -o docs"
   },
   "author": "Metodi Deribanov",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "browser-sync": "^2.18.12",
     "del": "^2.2.2",
     "docco": "^0.7.0",
+    "documentation": "^4.0.0-rc.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-compass": "^2.1.0",
