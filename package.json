@@ -15,9 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "docco": "^0.7.0",
-    "flyd": "^0.2.4",
     "gulp": "^3.9.1",
-    "rambda": "^0.6.1",
-    "requirejs": "^2.3.3"
   }
 }

@@ -5,7 +5,7 @@ define([
 	'core/dom',
 	'helper/log',
 	'helper/base',
-	'node_modules/flyd/flyd.js'
+	'bower_components/flyd/flyd.js'
 ], function (cfg, module, router, dom, log, base, radio) {
 	'use strict'
 
@@ -46,7 +46,7 @@ define([
 			  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
 			  ' and this is just normal text',
 			]);
-			tpl.patch(container, vnode); 
+			// tpl.patch(container, vnode); 
 
 			document.addEventListener('mousemove', mousemove);
 

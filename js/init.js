@@ -12,8 +12,8 @@ require.config({
     the paths config could be for a directory.
     */
     paths: {
-        bower_components: '../bower_components',
-        node_modules: '../node_modules'
+        vendor: '../bower_components',
+        // node_modules: '../node_modules'
     },
 	waitSeconds: 60,
 	urlArgs: function(id, url) {
