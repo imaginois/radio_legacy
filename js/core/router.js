@@ -5,9 +5,7 @@ define([
 	'helper/log'
 ], function (cfg, manager, template, log) {
 	'use strict'
-  /*
-  @lends Router
-   */
+  
 	function Router () {
       var routes = {};
       var events = [];

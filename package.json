@@ -8,16 +8,16 @@
     "url": "git@bitbucket.org:minervanetworks/radio.git"
   },
   "scripts": {
-    "test-lib": "mocha",
     "test": "eslint lib/ test/ module/ && mocha -R dot test/*.js module/**/test/*.js",
-    "docs": "documentation readme js/ --section=Wiki && documentation build -f md node_modules/flyd/lib/index.js > API.md && documentation build js/** -f html -o docs",
-    "perf": "./perf/run-benchmarks",
-    "post-to-coveralls-io": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "build": "browserify -s flyd lib/index.js > flyd.js && uglifyjs flyd.js -o flyd.min.js"
+    "docs": "documentation readme js/ --section=Wiki && documentation build -f md node_modules/flyd/lib/index.js > API.md && documentation build js/** -f html -o docs"
   },
   "author": "Metodi Deribanov",
   "license": "ISC",
   "dependencies": {
-    "flyd": "^0.2.4"
+    "docco": "^0.7.0",
+    "flyd": "^0.2.4",
+    "gulp": "^3.9.1",
+    "rambda": "^0.6.1",
+    "requirejs": "^2.3.3"
   }
 }
