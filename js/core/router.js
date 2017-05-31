@@ -19,6 +19,12 @@ define([
         }
       };
 
+      window.addEventListener('hashchange', router);
+      window.addEventListener('load', router);
+
+      this.route = route;
+      this.routes = routes;
+
       function route (path, templateId, controller) {
       	var controller = controller || new Function();
 
@@ -77,12 +83,6 @@ define([
           ctrl.$refresh();
         }
       }
-
-      window.addEventListener('hashchange', router);
-      window.addEventListener('load', router);
-
-      this.route = route;
-      this.routes = routes;
 
 	}
     

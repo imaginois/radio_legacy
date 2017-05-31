@@ -38,11 +38,21 @@ define([
 
 			var container = $(cfg.app.mainContainerSelector);
 
-			var vnode = tpl.h('div#container.two.classes', {style: {background: "red"}}, [
-			  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
-			  ' and this is just normal text',
+			var vnode = tpl.h('div.main.wrapper.clearfix', [
+			  	tpl.h('aside', [
+			  		tpl.h('h3', ['That awkward Moment full movie'])
+		  		]),	
+		  		tpl.h('article.stripes', [
+		  			tpl.h('section#continuewatching.clearfix', [
+				  		tpl.h('header', [tpl.h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']),
+				  		tpl.h('article', [tpl.h('div.items',[
+													tpl.h('div.image-wrapper', ['<img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />'])
+												])]),
+		  			]),
+		  		]),
 			]);
-			// tpl.patch(container, vnode); 
+
+			tpl.patch(container, vnode); 
 
 			document.addEventListener('mousemove', mousemove);
 
