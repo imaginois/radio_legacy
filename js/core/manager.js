@@ -28,6 +28,10 @@ define([
 	]
 
 	function Manager () {
+		/**
+		 * Initialization function. Starts the application
+		 * @return {bool} Result of execution: True/False
+		 */
 		function init () {
 			var mousemove = radio.stream();
 			var tpl = (new dom()).dom;
@@ -42,7 +46,7 @@ define([
 			  tpl.h('span', {style: {fontWeight: 'bold'}}, 'This is bold'),
 			  ' and this is just normal text',
 			]);
-			// tpl.patch(container, vnode); 
+			tpl.patch(container, vnode); 
 
 			document.addEventListener('mousemove', mousemove);
 
