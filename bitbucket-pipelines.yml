@@ -25,7 +25,8 @@ pipelines:
           - npm install documentation -g
           - bower install --allow-root
           - yarn install
-          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/karma start karma.conf.js #npm test
-          - documentation readme js/ --section=Wiki
-          - documentation build -f md ./bower_components/flyd/lib/index.js > API.md
-          - documentation build js/** -f html -o docs #npm run docs
+          #- /opt/atlassian/pipelines/agent/build/node_modules/.bin/karma start karma.conf.js #npm test
+          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/documentation readme js/ --section=Wiki
+          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/documentation build -f md ./bower_components/flyd/lib/index.js > API.md
+          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/documentation build js/** -f html -o docs #npm run docs
+          - gulp
