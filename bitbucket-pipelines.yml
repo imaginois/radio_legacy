@@ -11,11 +11,14 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - node --version
           - npm --version
+          - pwd
+          - whoami
+          - ls -la
           - npm install
           - npm install yarn -g
           - npm install phantomjs -g
           - npm install bower -g
           - bower install --allow-root
           - yarn install
-          - npm test
-          - npm run docs
+          - ./node_modules/karma/bin/karma start karma.conf.js #npm test
+          - ./node_modules/.bin/documentation readme js/ --section=Wiki && ./node_modules/.bin/documentation build -f md ./bower_components/flyd/lib/index.js > API.md && ./node_modules/.bin/documentation build js/** -f html -o docs #npm run docs
