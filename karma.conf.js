@@ -19,7 +19,7 @@ module.exports = function(config) {
     ],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'src/**/*.js': ['coverage']
+      'js/**/*.js': ['coverage']
     },
     concurrency: Infinity,
     coverageReporter: {
