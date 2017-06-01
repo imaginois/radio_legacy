@@ -13,8 +13,9 @@ pipelines:
           - npm --version
           - npm install
           - npm install yarn -g
+          - npm install phantomjs -g
           - npm install bower -g
-          - yarn install
           - bower install --allow-root
+          - yarn install
           - npm test
           - npm run docs
