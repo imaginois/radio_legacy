@@ -9,9 +9,12 @@ pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
-          - npm i -g bower
+          - node --version
+          - npm --version
           - npm install
-          # - bower install
+          - npm install yarn -g
+          - npm install bower -g
           - yarn install
+          - bower install --allow-root
           - npm test
           - npm run docs
