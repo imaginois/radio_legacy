@@ -14,6 +14,7 @@ pipelines:
           - pwd
           - whoami
           - ls -la
+          - ls -la /opt/atlassian/pipelines/agent/build/node_modules/
           - npm install
           - npm install yarn -g
           - npm install phantomjs -g
