@@ -1,0 +1,29 @@
+# This is a sample build configuration for Javascript (Node.js).
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:6.9.4
+
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - node --version
+          - npm --version
+          - pwd
+          - whoami
+          - ls -la
+          - ls -la /opt/atlassian/pipelines/agent/build
+          - npm install
+          - npm install yarn -g
+          - npm install phantomjs -g
+          - npm install bower -g
+          - npm install karma -g
+          - npm install documentation -g
+          - bower install --allow-root
+          - yarn install
+          - karma start karma.conf.js #npm test
+          - documentation readme js/ --section=Wiki
+          - documentation build -f md ./bower_components/flyd/lib/index.js > API.md
+          - documentation build js/** -f html -o docs #npm run docs
