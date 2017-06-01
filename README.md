@@ -323,7 +323,7 @@ instances of the routes object
 The events object defines applicable event handlers
 that can be attached to routes.
 
-### route
+### addEventListener
 
 Defines a new route. Attaches all applied event listeners
 
