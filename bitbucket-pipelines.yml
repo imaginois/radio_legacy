@@ -17,6 +17,8 @@ pipelines:
           - ls -la /opt/atlassian/pipelines/agent/build
           - npm install
           - npm install yarn -g
+          - locate node_modules
+          - find / -type d -name "node_modules" -ls
           - npm install phantomjs -g
           - npm install bower -g
           - npm install karma -g
