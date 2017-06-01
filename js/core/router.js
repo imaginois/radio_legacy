@@ -24,7 +24,6 @@ define([
         }
       };
 
-<<<<<<< HEAD
       /**
        * Defines a new route. Attaches all applied event listeners
        * @param  {string} path       Route path
@@ -32,14 +31,12 @@ define([
        * @param  {object} controller JS object to act as a controller for the given view 
        * @return {void}            [description]
        */
-=======
       window.addEventListener('hashchange', router);
       window.addEventListener('load', router);
 
       this.route = route;
       this.routes = routes;
 
->>>>>>> navigation
       function route (path, templateId, controller) {
       	var controller = controller || new Function();
 
