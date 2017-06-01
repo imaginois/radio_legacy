@@ -9,23 +9,26 @@ pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
+          - npm install
+          - npm install yarn -g
           - node --version
           - npm --version
           - pwd
           - whoami
           - ls -la
           - ls -la /opt/atlassian/pipelines/agent/build
-          - npm install
-          - npm install yarn -g
-          - locate node_modules
           - find / -type d -name "node_modules" -ls
+          - ls -la  /opt/atlassian/pipelines/agent/build/node_modules/.bin/
           - npm install phantomjs -g
           - npm install bower -g
+          - npm install gulp -g
           - npm install karma -g
           - npm install documentation -g
           - bower install --allow-root
           - yarn install
-          - karma start karma.conf.js #npm test
-          - documentation readme js/ --section=Wiki
-          - documentation build -f md ./bower_components/flyd/lib/index.js > API.md
-          - documentation build js/** -f html -o docs #npm run docs
+          - gulp
+          #- /opt/atlassian/pipelines/agent/build/node_modules/.bin/karma start karma.conf.js #npm test
+          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/documentation readme js/ --section=Wiki
+          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/documentation build -f md ./bower_components/flyd/lib/index.js > API.md
+          - /opt/atlassian/pipelines/agent/build/node_modules/.bin/documentation build js/** -f html -o docs #npm run docs
+          - gulp
