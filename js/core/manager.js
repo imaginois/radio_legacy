@@ -5,7 +5,7 @@ define([
 	'js/core/dom',
 	'js/helper/log',
 	'js/helper/base',
-	'base/bower_components/flyd/flyd.js'
+	'js/core/flyd'
 ], function (cfg, module, router, dom, log, base, radio) {
 	'use strict';
 
@@ -74,10 +74,9 @@ define([
 		 * Multiple instances of the app can run different
 		 * instances of the routes object
 		 */
-		function setRoutes () {
+		function setRoutes (routes) {
 			var routes = routes || defaultRoutes;
 			routes.map(addRoute);
-			log.info(router);
 		}
 
 		/**

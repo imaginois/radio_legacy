@@ -7,10 +7,12 @@ module.exports = function(config) {
     frameworks: ['jasmine', 'requirejs'],
     files: [
       'test-main.js',
+      // 'js/init.js',
       {pattern: 'js/**/*.js', included: false},
+      {pattern: 'spec/**/*.js', included: false},
+      // {pattern: 'js/core/*.js', included: false},
       {pattern: 'bower_components/flyd/*.js', included: false},
       {pattern: 'bower_components/snabbdom/dist/*.js', included: false},
-      {pattern: 'spec/**/*Spec.js', included: false}
     ],
     exclude: [
         // 'js/config.js',
@@ -30,12 +32,15 @@ module.exports = function(config) {
             { type: 'text-summary' }
         ]
     },
+    client: {
+      requireJsShowNoTimestampsError: '^(?!.*(^/base/node_modules/))'
+    },
     port: 9876,
     colors: true,
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_ERROR,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: true
+    singleRun: false
   });
 };
