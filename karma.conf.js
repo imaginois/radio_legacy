@@ -9,6 +9,7 @@ module.exports = function(config) {
       'test-main.js',
       {pattern: 'js/**/*.js', included: false},
       {pattern: 'bower_components/flyd/*.js', included: false},
+      {pattern: 'bower_components/snabbdom/dist/*.js', included: false},
       {pattern: 'spec/**/*Spec.js', included: false}
     ],
     exclude: [

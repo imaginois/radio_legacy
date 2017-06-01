@@ -5,7 +5,7 @@ define([
 	'js/core/dom',
 	'js/helper/log',
 	'js/helper/base',
-	'bower_components/flyd/flyd.js'
+	'base/bower_components/flyd/flyd.js'
 ], function (cfg, module, router, dom, log, base, radio) {
 	'use strict';
 
@@ -56,7 +56,7 @@ define([
 		  		]),
 			]);
 
-			tpl.patch(container, vnode); 
+			// tpl.patch(container, vnode); 
 
 			document.addEventListener('mousemove', mousemove);
 
