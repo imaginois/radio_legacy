@@ -1,5 +1,5 @@
 define([
-	'config',
+	'js/config',
 ], function (cfg) {
 	'use strict';
 

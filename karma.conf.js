@@ -7,10 +7,14 @@ module.exports = function(config) {
     frameworks: ['jasmine', 'requirejs'],
     files: [
       'test-main.js',
-      {pattern: 'src/**/*.js', included: false},
+      {pattern: 'js/**/*.js', included: false},
+      {pattern: 'bower_components/flyd/*.js', included: false},
       {pattern: 'spec/**/*Spec.js', included: false}
     ],
     exclude: [
+        // 'js/config.js',
+        'js/init.js',
+        // 'bower_components/**'
     ],
     reporters: ['progress', 'coverage'],
     preprocessors: {
@@ -31,6 +35,6 @@ module.exports = function(config) {
     logLevel: config.LOG_ERROR,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: false
+    singleRun: true
   });
 };

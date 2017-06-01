@@ -2,17 +2,14 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
-var sync = require('browser-sync');
 var jshint = require('gulp-jshint');
 var del = require('del');
-var refresh = require('gulp-livereload');
-var lr = require('tiny-lr');
-var server = lr();
+var Server = require('karma').Server;
 
 /*
 Default task.
  */
-gulp.task('default', ['clean', 'scripts']);
+gulp.task('default', ['test', 'clean', 'scripts']);
 
 gulp.task('scripts', function () {
 	return gulp.src(['js/**/*.js', '!js/**/*.min*'])
@@ -21,17 +18,26 @@ gulp.task('scripts', function () {
 	    .pipe(concat('app.js'))
 	    .pipe(uglify())
 		.pipe(gulp.dest('build'))
-	    .pipe(refresh(server))
 });
 
-/*
-Starts a local server for live-reloading the changes
+/**
+ * Run test once and exit
  */
-gulp.task('lr-server', function() {
-    server.listen(35729, function(err) {
-        if(err) return console.log(err);
-    });
-})
+gulp.task('test', function (done) {
+  return new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
+});
+
+/**
+ * Watch for file changes and re-run tests on each change
+ */
+gulp.task('tdd', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js'
+  }, done).start();
+});
 
 /*
 Deletes the build directory

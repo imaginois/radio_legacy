@@ -1,10 +1,10 @@
 define([
-	'config',
+	'js/config',
 	'module',
-	'core/router',
-	'core/dom',
-	'helper/log',
-	'helper/base',
+	'js/core/router',
+	'js/core/dom',
+	'js/helper/log',
+	'js/helper/base',
 	'bower_components/flyd/flyd.js'
 ], function (cfg, module, router, dom, log, base, radio) {
 	'use strict';

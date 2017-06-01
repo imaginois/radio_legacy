@@ -1,7 +1,7 @@
 define([
-	'config',
-	'core/manager',
-	'helper/log'
+	'js/config',
+	'js/core/manager',
+	'js/helper/log'
 ], function (cfg, manager, log) {
 	'use strict';
 	

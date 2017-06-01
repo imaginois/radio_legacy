@@ -3,7 +3,7 @@ require.config({
      * By default load any module IDs from js/lib
      * @type {String}
      */
-    baseUrl: 'js/',
+    baseUrl: '',
     /*
     except, if the module ID starts with "app",
     load it from the js/app directory. paths
@@ -12,7 +12,7 @@ require.config({
     the paths config could be for a directory.
     */
     paths: {
-        vendor: '../bower_components',
+        vendor: 'bower_components',
         // node_modules: '../node_modules'
     },
 	waitSeconds: 60,
@@ -28,7 +28,7 @@ require.config({
 
 // Start the main app logic.
 require([
-    'core/manager'
+    'js/core/manager'
 ], function (manager) {
     "use strict";
 

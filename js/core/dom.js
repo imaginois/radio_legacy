@@ -1,7 +1,7 @@
 define(function (require) {
 	'use strict';
 
-	var cfg = require('config');
+	var cfg = require('js/config');
 	var snabbdom = require('vendor/snabbdom/dist/snabbdom');
 	var patch = snabbdom.init([ // Init patch function with chosen modules 
 	  require('vendor/snabbdom/dist/snabbdom-class').default, // makes it easy to toggle classes 
