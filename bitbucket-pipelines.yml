@@ -11,7 +11,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm i -g bower
           - npm install
-          - bower install
+          # - bower install
           - yarn install
           - npm test
           - npm run docs
