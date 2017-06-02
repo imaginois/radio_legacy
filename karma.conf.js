@@ -17,15 +17,16 @@ module.exports = function(config) {
     exclude: [
         // 'js/config.js',
         'js/init.js',
-        // 'bower_components/**'
+        'js/lib'
     ],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'js/**/*.js': ['coverage']
+      'js/core/**/*.js': ['coverage'],
+      'js/helper/**/*.js': ['coverage'],
     },
     concurrency: Infinity,
     coverageReporter: {
-        includeAllSources: true,
+        includeAllSources: false,
         dir: 'coverage/',
         reporters: [
             { type: "html", subdir: "html" },

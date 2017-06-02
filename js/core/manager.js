@@ -5,7 +5,7 @@ define([
 	'js/core/dom',
 	'js/helper/log',
 	'js/helper/base',
-	'js/core/flyd'
+	'js/lib/flyd'
 ], function (cfg, module, router, dom, log, base, radio) {
 	'use strict';
 
