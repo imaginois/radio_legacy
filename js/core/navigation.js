@@ -1,9 +1,8 @@
 define([
 	'config',
   	'core/manager',
-	'core/template',
 	'helper/log'
-], function (cfg, manager, template, log) {
+], function (cfg, manager, log) {
 	'use strict'
 
 	function Navigation () {

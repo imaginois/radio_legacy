@@ -1,9 +1,8 @@
 define([
 	'js/config',
   'js/core/manager',
-	'js/core/template',
 	'js/helper/log'
-], function (cfg, manager, template, log) {
+], function (cfg, manager, log) {
 	'use strict';
   
 	function Router () {
@@ -23,6 +22,11 @@ define([
           listeners.forEach(function (fn) { fn(); });
         }
       };
+      window.addEventListener('hashchange', router);
+      window.addEventListener('load', router);
+
+      this.route = route;
+      this.routes = routes;
 
       /**
        * Defines a new route. Attaches all applied event listeners
@@ -31,12 +35,6 @@ define([
        * @param  {object} controller JS object to act as a controller for the given view 
        * @return {void}            [description]
        */
-      window.addEventListener('hashchange', router);
-      window.addEventListener('load', router);
-
-      this.route = route;
-      this.routes = routes;
-
       function route (path, templateId, controller) {
       	var controller = controller || new Function();
 
@@ -76,7 +74,11 @@ define([
 
         var url = location.hash.slice(1) || '/';
 
-        var route = routes[url] || routes['error'];
+        if(url.indexOf('/') < 0) {
+          url = '/' + url;
+        }
+
+        var route = routes[url] || routes['*']
 
         if (route && route.controller) {
           var ctrl = new route.controller();
