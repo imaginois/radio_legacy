@@ -16,7 +16,7 @@ define([
   			log.info("load Asset");
 		}],
 
-		['/epg', 'epg', /* istanbul ignore next */ function () {
+		['/epg', 'epg', function () {
 		    this.counter = 0;
   			this.heading = 'Hello EPG!';
 			this.$on('#continuewatching', 'click', function () {
@@ -62,11 +62,12 @@ define([
 
 			/* istanbul ignore next */
 			radio.on(function (mouseEvents) {
-				if ($('.selected')) {
-					$('.selected').classList.remove('selected');
+				if(mouseEvents.target.classList.contains('s')){
+					if ($('.selected')) {
+						$('.selected').classList.remove('selected');
+					}
+					mouseEvents.target.classList.add('selected');
 				}
-				mouseEvents.target.classList.add('selected');
-				console.log("mouseEvents", mouseEvents);
 
 			}, mousemove);
 		}

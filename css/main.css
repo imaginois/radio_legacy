@@ -215,8 +215,8 @@ nav a:hover {
     margin-bottom: 4px;
 }
 .stripes > section .selected {
-    border: 3px solid #B11;
-    padding: 7px;
+    /* border: 3px solid #B11; */
+    /* padding: 7px; */
 }
 .stripes > section > header {
     width: 115px;
