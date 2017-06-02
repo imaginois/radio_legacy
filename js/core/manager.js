@@ -11,9 +11,12 @@ define([
 
 	var defaultRoutes = [
 		['/', 'home'],
+		['/notemplate', function (){
+          log.info("Notemplate url")
+        }],
 		['/asset', 'asset', function () {
   			this.heading = 'I\'m page two!';
-  			console.log("load Asset");
+  			log.info("load Asset");
 		}],
 		['/epg', 'epg', function () {
 		    this.counter = 0;

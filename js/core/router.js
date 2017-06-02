@@ -22,12 +22,14 @@ define([
           listeners.forEach(function (fn) { fn(); });
         }
       };
+
       window.addEventListener('hashchange', router);
       window.addEventListener('load', router);
 
       this.route = route;
       this.routes = routes;
       this.router = router;
+      this.events = events;
 
       /**
        * Defines a new route. Attaches all applied event listeners
@@ -44,11 +46,12 @@ define([
           templateId = null;
         }
         var listeners = [];
+        // console.log(events)
         Object.defineProperty(controller.prototype, '$on', {
           value: events.on
         });
         Object.defineProperty(controller.prototype, '$refresh', {
-          value: events.refresh.bind(this, listeners), 
+          value: this.events.refresh.bind(this, listeners), 
           writable : true
         });
         routes[path] = {templateId: templateId, controller: controller, onRefresh: listeners.push.bind(listeners)};
@@ -74,6 +77,10 @@ define([
       function router () {
         el = el || $('#view');
 
+        if (!el) {
+          return false;
+        }
+
         removeEventListeners();
 
         events = [];
@@ -87,9 +94,6 @@ define([
 
         if (route && route.controller) {
           var ctrl = new route.controller();
-          if (!el || !route.templateId) {
-            return false;
-          }
 
           route.onRefresh(function () {
             removeEventListeners();

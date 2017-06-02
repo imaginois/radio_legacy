@@ -4,7 +4,7 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', 'requirejs', 'ng-scenario'],
+    frameworks: ['jasmine', 'requirejs'],
     files: [
       'test-main.js',
       // 'js/init.js',

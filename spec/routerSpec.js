@@ -29,6 +29,14 @@
         window.location.hash = '#wrong'
         expect(router.router()).toBeTruthy();
       });
+
+      it("should be able to implement a route without template", function () {
+        router.route('/notemplate', function (){
+          // console.log("Notemplate url");
+        });
+        window.location.hash = '#/notemplate';
+        expect(router.router()).toBeTruthy();
+      });
     });
 
     describe("Router.js testing clicks on elements", function () {
@@ -38,7 +46,6 @@
         // var spyEvent = spyOnEvent('#continuewatching', 'click');
         document.querySelector('#continuewatching').click();
         // expect('click').toHaveBeenTriggeredOn('#continuewatching');
-        console.log('And the results are...');
         router.router();
       });
     });
