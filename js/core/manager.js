@@ -66,10 +66,10 @@ define([
 					$('.selected').classList.remove('selected');
 				}
 				mouseEvents.target.classList.add('selected');
+				console.log("mouseEvents", mouseEvents);
+
 			}, mousemove);
 		}
-
-		this.test = 'test'
 
 		/**
 		 * Initializes the routing object for the application

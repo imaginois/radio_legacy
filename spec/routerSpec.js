@@ -55,7 +55,7 @@
     });
 
 
-    describe("Router.js testing clicks on elements", function () {
+    describe("Router.js testing mouse events on elements", function () {
       it('should be able to click Continue Watching stripe', function () {
         window.location.hash = '#epg';
         router.router();
@@ -64,6 +64,7 @@
         // expect('click').toHaveBeenTriggeredOn('#continuewatching');
         router.router();
       });
+
     });
   });
 }());
