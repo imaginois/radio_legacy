@@ -73,6 +73,9 @@ define([
 			router.route.apply(router, routeConfig);
 		}
 
+		// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...
+		console.log("logObjectKeySize", log.expensiveKeys(radio));
+
 		init();
 	}
     

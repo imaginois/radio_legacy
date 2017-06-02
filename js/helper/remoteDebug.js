@@ -216,7 +216,7 @@ define([
                 }
             };
 
-        if(cfg.LOCAL && cfg.DEBUG && cfg.LOG_LEVEL > 2){
+        if(cfg.LOCAL && cfg.DEBUG && cfg.DEBUG_LEVEL > 2){
             timing.printSimpleTable(); // print the timings table on app startup
         }
         return timing;
