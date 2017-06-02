@@ -60,6 +60,7 @@ define([
 
 			document.addEventListener('mousemove', mousemove);
 
+			/* istanbul ignore next */
 			radio.on(function (mouseEvents) {
 				if ($('.selected')) {
 					$('.selected').classList.remove('selected');
@@ -68,6 +69,7 @@ define([
 			}, mousemove);
 		}
 
+		this.test = 'test'
 
 		/**
 		 * Initializes the routing object for the application

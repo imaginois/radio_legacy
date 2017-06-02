@@ -32,5 +32,5 @@ require([
 ], function (manager) {
     "use strict";
 
-	new manager();
+    var man = new manager();
 });

@@ -5,7 +5,6 @@
 
       it("should be able to be instanced", function () {
       	var man = new manager();
-      	console.log(man);
         expect(man).toEqual(jasmine.any(Object));
       });
 

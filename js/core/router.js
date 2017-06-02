@@ -27,6 +27,7 @@ define([
 
       this.route = route;
       this.routes = routes;
+      this.router = router;
 
       /**
        * Defines a new route. Attaches all applied event listeners
@@ -43,8 +44,13 @@ define([
           templateId = null;
         }
         var listeners = [];
-        Object.defineProperty(controller.prototype, '$on', {value: events.on});
-        Object.defineProperty(controller.prototype, '$refresh', {value: events.refresh.bind(undefined, listeners)});
+        Object.defineProperty(controller.prototype, '$on', {
+          value: events.on
+        });
+        Object.defineProperty(controller.prototype, '$refresh', {
+          value: events.refresh.bind(this, listeners), 
+          writable : true
+        });
         routes[path] = {templateId: templateId, controller: controller, onRefresh: listeners.push.bind(listeners)};
       }
 
@@ -77,13 +83,12 @@ define([
         if(url.indexOf('/') < 0) {
           url = '/' + url;
         }
-
         var route = routes[url] || routes['*']
 
         if (route && route.controller) {
           var ctrl = new route.controller();
           if (!el || !route.templateId) {
-            return;
+            return false;
           }
 
           route.onRefresh(function () {
@@ -95,6 +100,8 @@ define([
           });
 
           ctrl.$refresh();
+        
+          return true;
         }
       }
 
