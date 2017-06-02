@@ -74,7 +74,7 @@ define([
 		}
 
 		// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...
-		console.log("logObjectKeySize", log.expensiveKeys(radio));
+		console.log("radio Object Key sizes", log.expensiveKeys(radio));
 
 		init();
 	}
