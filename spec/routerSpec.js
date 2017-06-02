@@ -21,7 +21,7 @@
 
         var continuewatching = document.createElement('div');
         continuewatching.setAttribute('id', 'continuewatching');
-        body.appendChild(continuewatching);
+        view.appendChild(continuewatching);
       });
 
       it("should navigate to #/epg", function () {
@@ -37,6 +37,11 @@
 
       it("should navigate to #/wrong", function () {
         window.location.hash = '#/wrong'
+        expect(router.router()).toBeTruthy();
+      });
+
+      it("should navigate to #", function () {
+        window.location.hash = '#'
         expect(router.router()).toBeTruthy();
       });
 

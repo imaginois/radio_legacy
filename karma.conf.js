@@ -22,7 +22,7 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
     preprocessors: {
       'js/core/**/*.js': ['coverage'],
-      'js/helper/**/*.js': ['coverage'],
+      'js/helper/!(log)*.js': ['coverage'],
     },
     concurrency: Infinity,
     coverageReporter: {

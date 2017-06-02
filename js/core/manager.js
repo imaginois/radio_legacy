@@ -11,19 +11,16 @@ define([
 
 	var defaultRoutes = [
 		['/', 'home'],
-		['/notemplate', function (){
-          log.info("Notemplate url")
-        }],
 		['/asset', 'asset', function () {
   			this.heading = 'I\'m page two!';
   			log.info("load Asset");
 		}],
-		['/epg', 'epg', function () {
+
+		['/epg', 'epg', /* istanbul ignore next */ function () {
 		    this.counter = 0;
   			this.heading = 'Hello EPG!';
 			this.$on('#continuewatching', 'click', function () {
 				this.counter += 1;
-				console.log(this.counter);
 				this.$refresh();
 			}.bind(this));
 		}],
