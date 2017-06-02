@@ -1,32 +1,42 @@
 (function () {
   'use strict';
   define(['js/core/router', 'js/core/manager'], function (router, manager) {
-    beforeEach(function () {
-      var body = document.getElementsByTagName("body")[0];
-      var view = document.createElement('div');
-      view.setAttribute('id', 'view');
-      body.appendChild(view);
 
-      var continuewatching = document.createElement('div');
-      continuewatching.setAttribute('id', 'continuewatching');
-      body.appendChild(continuewatching);
+    describe("Router.js missing dom elements", function () {
+    
+      it("should be able to handle missing dom container", function () {
+        window.location.hash = '#/epg';
+        expect(router.router()).toBeFalsy();
+      });
+
     });
 
 
     describe("Router.js testing URL navigation", function () {
+      beforeEach(function () {
+        var body = document.getElementsByTagName("body")[0];
+        var view = document.createElement('div');
+        view.setAttribute('id', 'view');
+        body.appendChild(view);
+
+        var continuewatching = document.createElement('div');
+        continuewatching.setAttribute('id', 'continuewatching');
+        body.appendChild(continuewatching);
+      });
+
       it("should navigate to #/epg", function () {
-        window.location.hash = '#epg';
+        window.location.hash = '#/epg';
         expect(router.router()).toBeTruthy();
       });
 
       it("should navigate to #/asset", function () {
-        window.location.hash = '#asset'
+        window.location.hash = '#/asset'
         expect(router.router()).toBeTruthy();
       });
 
 
       it("should navigate to #/wrong", function () {
-        window.location.hash = '#wrong'
+        window.location.hash = '#/wrong'
         expect(router.router()).toBeTruthy();
       });
 
@@ -38,6 +48,7 @@
         expect(router.router()).toBeTruthy();
       });
     });
+
 
     describe("Router.js testing clicks on elements", function () {
       it('should be able to click Continue Watching stripe', function () {

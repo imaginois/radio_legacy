@@ -77,6 +77,7 @@ define([
       function router () {
         el = el || $('#view');
 
+
         if (!el) {
           return false;
         }
