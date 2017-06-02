@@ -17,12 +17,12 @@ module.exports = function(config) {
     exclude: [
         // 'js/config.js',
         'js/init.js',
-        'js/lib'
+        'js/lib',
     ],
     reporters: ['progress', 'coverage'],
     preprocessors: {
       'js/core/**/*.js': ['coverage'],
-      'js/helper/!(log)*.js': ['coverage'],
+      'js/helper/!(log|remoteDebug)*.js': ['coverage'], //exclude the debuggers
     },
     concurrency: Infinity,
     coverageReporter: {

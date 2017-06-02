@@ -1,6 +1,7 @@
 define([
 	'js/config',
-], function (cfg) {
+	'js/helper/remoteDebug',
+], function (cfg, remoteDebug) {
 	'use strict';
 
 	// TODO: Provide different interfaces for different 

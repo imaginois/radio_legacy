@@ -5,27 +5,10 @@ define([
 	'js/core/dom',
 	'js/helper/log',
 	'js/helper/base',
-	'js/lib/flyd'
-], function (cfg, module, router, dom, log, base, radio) {
+	'js/lib/flyd',
+	'js/conf/defaultRoutes'
+], function (cfg, module, router, dom, log, base, radio, defaultRoutes) {
 	'use strict';
-
-	var defaultRoutes = [
-		['/', 'home'],
-		['/asset', 'asset', function () {
-  			this.heading = 'I\'m page two!';
-  			log.info("load Asset");
-		}],
-
-		['/epg', 'epg', function () {
-		    this.counter = 0;
-  			this.heading = 'Hello EPG!';
-			this.$on('#continuewatching', 'click', function () {
-				this.counter += 1;
-				this.$refresh();
-			}.bind(this));
-		}],
-		['*', 'error404']
-	];
 
 	function Manager () {
 		/**

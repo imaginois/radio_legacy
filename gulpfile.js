@@ -6,12 +6,15 @@ var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var del = require('del');
 var Server = require('karma').Server;
+var browserSync = require('browser-sync').create();
+
 
 /*
 Default task.
  */
 gulp.task('default', ['test', 'clean', 'scripts']);
 gulp.task('docs', ['docs-md', 'docs-html']);
+gulp.task('watch', ['tdd', 'browser-sync']);
 
 gulp.task('scripts', function () {
 	return gulp.src(['js/**/*.js', '!js/**/*.min*'])
@@ -39,6 +42,23 @@ gulp.task('tdd', function (done) {
   new Server({
     configFile: __dirname + '/karma.conf.js'
   }, done).start();
+});
+
+/*
+Watch for file changes and reload the browser
+ */
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        // host: "radio.local",
+        proxy: "radio.local",
+        open: false,
+        files: [
+          '*.html', 
+          'css/**/*.css', 
+          'js/**/*.js'
+        ]
+    });
+    // gulp.watch("js/**/*.js").on('change', browserSync.reload);
 });
 
 /*

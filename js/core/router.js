@@ -23,8 +23,8 @@ define([
         }
       };
 
-      window.addEventListener('hashchange', router);
-      window.addEventListener('load', router);
+      window.addEventListener('hashchange', router, false);
+      window.addEventListener('load', router, false);
 
       this.route = route;
       this.routes = routes;
@@ -92,9 +92,10 @@ define([
           url = '/' + url;
         }
         var route = routes[url] || routes['*']
-
+        
+        /* istanbul ignore else  */
         if (route && route.controller) {
-          var ctrl = new route.controller();
+          var ctrl = new route.controller(route);
 
           route.onRefresh(function () {
             removeEventListeners();
