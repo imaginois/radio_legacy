@@ -27,3 +27,4 @@ pipelines:
           - bower install --allow-root
           - yarn install
           - gulp
+          - sh  /opt/atlassian/pipelines/agent/build/shell/rollbar_deployment_notification.sh
