@@ -29,8 +29,9 @@ module.exports = function(config) {
         includeAllSources: false,
         dir: 'coverage/',
         reporters: [
-            { type: "html", subdir: "html" },
-            { type: 'text-summary' }
+          { type: "html", subdir: "html" },
+          // { type: 'text', subdir: '.', file: 'coverage.txt' },
+          { type: 'text-summary' }
         ]
     },
     client: {

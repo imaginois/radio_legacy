@@ -6,7 +6,7 @@
     
       it("should be able to handle missing dom container", function () {
         window.location.hash = '#/epg';
-        expect(router.router()).toBeTruthy();
+        expect(router.router()).toBeFalsy();
       });
 
     });
