@@ -1,12 +1,19 @@
 (function () {
   'use strict';
   define(['js/core/manager'], function (manager) {
-    describe("Manager", function () {
+	beforeEach(function () {
+		var body = document.getElementsByTagName("body")[0];
+		var view = document.createElement('div');
+		view.setAttribute('id', 'view');
+		body.appendChild(view);
+    	console.log(document.querySelector('#view'));
+	});
 
-      it("should be able to be instanced", function () {
-      	var man = new manager();
-        expect(man).toEqual(jasmine.any(Object));
-      });
+    describe("Manager", function () {
+    	it("should be able to be instanced", function () {
+      		var man = new manager();
+        	expect(man).toEqual(jasmine.any(Object));
+     	});
 
     });
   });

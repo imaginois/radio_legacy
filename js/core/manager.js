@@ -5,8 +5,9 @@ define([
 	'js/core/dom',
 	'js/helper/log',
 	'js/lib/flyd',
-	'js/conf/defaultRoutes'
-], function (cfg, module, router, dom, log, radio, defaultRoutes) {
+	'js/conf/defaultRoutes',
+	'js/core/section',
+], function (cfg, module, router, dom, log, radio, defaultRoutes, section) {
 	'use strict';
 
 	function Manager () {
@@ -15,44 +16,10 @@ define([
 		 * @return {bool} Result of execution: True/False
 		 */
 		function init () {
-			var mousemove = radio.stream();
-			var tpl = (new dom()).dom;
-			
 			setRoutes();			
-
-
-			var container = $(cfg.app.mainContainerSelector);
-
-			var vnode = tpl.h('div.main.wrapper.clearfix', [
-			  	tpl.h('aside', [
-			  		tpl.h('h3', ['That awkward Moment full movie'])
-		  		]),	
-		  		tpl.h('article.stripes', [
-		  			tpl.h('section#continuewatching.clearfix', [
-				  		tpl.h('header', [tpl.h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']),
-				  		tpl.h('article', [tpl.h('div.items',[
-													tpl.h('div.image-wrapper', ['<img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />'])
-												])]),
-		  			]),
-		  		]),
-			]);
-
-			// tpl.patch(container, vnode); 
-
-			document.addEventListener('mousemove', mousemove);
-
-			/* istanbul ignore next */
-			radio.on(function (mouseEvents) {
-				if(mouseEvents.target.classList.contains('s')){
-					if ($('.selected')) {
-						$('.selected').classList.remove('selected');
-					}
-					mouseEvents.target.classList.add('selected');
-				}
-
-			}, mousemove);
-
 			log.info('Manager Init Finished', Date.now());
+			log.info("radio Object Key sizes", log.expensiveKeys(radio));
+			// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...
 		}
 
 		/**
@@ -72,9 +39,6 @@ define([
 		function addRoute (routeConfig) {
 			router.route.apply(router, routeConfig);
 		}
-
-		// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...
-		log.info("radio Object Key sizes", log.expensiveKeys(radio));
 
 		init();
 	}
