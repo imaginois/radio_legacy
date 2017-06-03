@@ -4,13 +4,20 @@ define([
 ], function (cfg, remoteDebug) {
 	'use strict';
 
+
+    throw new Error('New Error')  // good
 	// TODO: Provide different interfaces for different 
 	// loggers, i.e. remoteDebug, socketDebug
 	function Log () {
 		function logInfo(o) {
 			var args = [].slice.call(arguments);
+			var logObj = args.reduce(function(acc, cur, i) {
+			  acc[i] = cur;
+			  return acc;
+			}, {});
 			if(cfg.DEBUG_LEVEL > 2) {
 				console.info.apply(console, args);
+				_LTracker.push(logObj);
 			}
 		}
 
@@ -18,6 +25,7 @@ define([
 			var args = [].slice.call(arguments);
 			if(cfg.DEBUG_LEVEL > 1) {
 				console.warn.apply(console, args);
+				_LTracker.push(o);
 			}
 		}
 
@@ -25,6 +33,7 @@ define([
 			var args = [].slice.call(arguments);
 			if(cfg.DEBUG_LEVEL > 0) {
 				console.error.apply(console, args);
+				_LTracker.push(o);
 			}
 		}
 

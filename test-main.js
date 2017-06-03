@@ -12,6 +12,12 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   }
 });
 
+
+            var _LTracker = _LTracker || [];
+            _LTracker.push({'logglyKey': 'dbb4d6ad-8a00-4200-8943-77b9671fa191',
+            'sendConsoleErrors' : true,
+            'tag' : 'loggly-jslogger'  });
+
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
   baseUrl: '/base',
