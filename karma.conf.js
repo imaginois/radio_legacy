@@ -16,7 +16,7 @@ module.exports = function(config) {
     ],
     exclude: [
         // 'js/config.js',
-        'js/init.js',
+        // 'js/init.js',
         'js/lib',
     ],
     reporters: ['progress', 'coverage'],

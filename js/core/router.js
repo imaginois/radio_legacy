@@ -1,8 +1,8 @@
 define([
 	'js/config',
-  'js/core/manager',
+  'js/helper/base',
 	'js/helper/log'
-], function (cfg, manager, log) {
+], function (cfg, base, log) {
 	'use strict';
   
 	function Router () {

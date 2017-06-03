@@ -4,10 +4,9 @@ define([
 	'js/core/router',
 	'js/core/dom',
 	'js/helper/log',
-	'js/helper/base',
 	'js/lib/flyd',
 	'js/conf/defaultRoutes'
-], function (cfg, module, router, dom, log, base, radio, defaultRoutes) {
+], function (cfg, module, router, dom, log, radio, defaultRoutes) {
 	'use strict';
 
 	function Manager () {
@@ -21,7 +20,6 @@ define([
 			
 			setRoutes();			
 
-			log.info('Manager Init Finished', Date.now());
 
 			var container = $(cfg.app.mainContainerSelector);
 
@@ -53,6 +51,8 @@ define([
 				}
 
 			}, mousemove);
+
+			log.info('Manager Init Finished', Date.now());
 		}
 
 		/**
@@ -74,7 +74,7 @@ define([
 		}
 
 		// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...
-		console.log("radio Object Key sizes", log.expensiveKeys(radio));
+		log.info("radio Object Key sizes", log.expensiveKeys(radio));
 
 		init();
 	}

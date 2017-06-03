@@ -29,8 +29,9 @@ require.config({
 
 // Start the main app logic.
 require([
-    'js/core/manager'
-], function (manager) {
+    'js/core/manager',
+    'js/helper/base'
+], function (manager, base) {
     "use strict";
 
     var man = new manager();

@@ -292,24 +292,22 @@ define([
         navigationTypes[navigation.TYPE_NAVIGATENEXT || 0] = "Navigation started by clicking on a link, or entering the URL in the user agent's address bar, or form submission.",
         navigationTypes[navigation.TYPE_RELOAD] = "Navigation through the reload operation or the location.reload() method.",
         navigationTypes[navigation.TYPE_BACK_FORWARD] = "Navigation through a history traversal operation.",
-        navigationTypes[navigation.TYPE_UNDEFINED] = "Navigation type is undefined.",
+        navigationTypes[navigation.TYPE_UNDEFINED] = "Navigation type is undefined.";
 
-        console.group("window.performance");
+        if(cfg.DEBUG_LEVEL > 2) {
+            console.group("window.performance");
+            console.log(window.performance);
+            console.group("Navigation Information");
+            console.log(navigationTypes[navigation.type]);
+            console.log("Number of redirects that have taken place: ", navigation.redirectCount)
+            console.groupEnd("Navigation Information");
 
-        console.log(window.performance);
-
-        console.group("Navigation Information");
-        console.log(navigationTypes[navigation.type]);
-        console.log("Number of redirects that have taken place: ", navigation.redirectCount)
-        console.groupEnd("Navigation Information");
-
-        console.group("Timing");
-        console.log(window.performance.timing);
-        console.table(timings, ["label", "time"]);
-        console.groupEnd("Timing");
-
-        console.groupEnd("window.performance");
-
+            console.group("Timing");
+            console.log(window.performance.timing);
+            console.table(timings, ["label", "time"]);
+            console.groupEnd("Timing");
+            console.groupEnd("window.performance");
+        }
     };
 
     var bindEvents = function(){
