@@ -12,9 +12,9 @@ define([
 			var tpl = (new dom()).dom;
 			var container = $(cfg.app.mainContainerSelector);
 
-			var vnode = tpl.h('div.main.wrapper.clearfix', [
+			var vnode = tpl.h('div#view.wrapper.clearfix', [
 			  	tpl.h('aside', [
-			  		tpl.h('h3', ['That awkward Moment full movie'])
+			  		tpl.h('h3', ['Snabbdom That awkward Moment full movie'])
 		  		]),	
 		  		tpl.h('article.stripes', [
 		  			tpl.h('section#continuewatching.clearfix', [
@@ -25,7 +25,7 @@ define([
 		  			]),
 		  		]),
 			]);
-			// tpl.patch(container, vnode); 
+			tpl.patch(container, vnode); 
     		log.info('Section Init Finished', Date.now());
     	}
 

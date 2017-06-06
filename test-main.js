@@ -13,10 +13,22 @@ Object.keys(window.__karma__.files).forEach(function(file) {
 });
 
 
-            var _LTracker = _LTracker || [];
-            _LTracker.push({'logglyKey': 'dbb4d6ad-8a00-4200-8943-77b9671fa191',
-            'sendConsoleErrors' : true,
-            'tag' : 'loggly-jslogger'  });
+var _LTracker = _LTracker || [];
+_LTracker.push({'logglyKey': 'dbb4d6ad-8a00-4200-8943-77b9671fa191',
+'sendConsoleErrors' : true,
+'tag' : 'loggly-jslogger'  });
+
+
+
+        var body = document.getElementsByTagName("body")[0];
+        var view = document.createElement('div');
+        view.setAttribute('id', 'view');
+        body.appendChild(view);
+
+        var continuewatching = document.createElement('div');
+        continuewatching.setAttribute('id', 'continuewatching');
+        view.appendChild(continuewatching);
+
 
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
