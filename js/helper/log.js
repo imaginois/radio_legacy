@@ -4,8 +4,9 @@ define([
 ], function (cfg, remoteDebug) {
 	'use strict';
 
+    // throw new Error('New Error')  // good
+   
 
-    throw new Error('New Error')  // good
 	// TODO: Provide different interfaces for different 
 	// loggers, i.e. remoteDebug, socketDebug
 	function Log () {
