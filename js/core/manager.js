@@ -14,7 +14,10 @@ define([
 		 * @return {bool} Result of execution: True/False
 		 */
 		function init () {
-			setRoutes();			
+			setRoutes();
+ 
+			window.dispatchEvent(new Event('ready'));
+			
 			log.info('Manager Init Finished', Date.now());
 			log.info("radio Object Key sizes", log.expensiveKeys(radio));
 			// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...

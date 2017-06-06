@@ -26,7 +26,7 @@ define([
       };
 
       window.addEventListener('hashchange', router, false);
-      window.addEventListener('load', router, false);
+      window.addEventListener('ready', router, false);
 
       this.route = route;
       this.routes = routes;
@@ -101,7 +101,7 @@ define([
 
           route.onRefresh(function () {
             removeEventListeners();
-            // console.log(section)
+            console.log(route.templateId)
             // var html = template.tmpl(route.templateId, ctrl);
             // console.log(html)
             Section.activate(route.templateId, ctrl);

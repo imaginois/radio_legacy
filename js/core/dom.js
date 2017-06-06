@@ -13,9 +13,9 @@ define(function (require) {
 	 
 
 	function Dom () {
-		this.dom = snabbdom;
-		this.dom.patch = patch;
-		this.dom.h = h;
+		this.tpl = snabbdom;
+		this.patch = patch;
+		this.h = h;
 	}
     
     return Dom;
