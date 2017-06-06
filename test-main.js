@@ -43,3 +43,12 @@ require.config({
   // we have to kickoff jasmine, as it is asynchronous
   callback: window.__karma__.start
 });
+
+require([
+    'js/core/manager',
+    'js/helper/base',
+    'js/lib/q',
+    'js/lib/q-xhr'
+], function (manager, base) {
+    "use strict";
+});

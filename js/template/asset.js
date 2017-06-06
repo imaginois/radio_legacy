@@ -20,7 +20,7 @@ define(function (require) {
 
 	var methods = {
 		load : function () {
-			console.log("EPG load function called");
+			console.log("Asset load function called");
 		}
 	}
     

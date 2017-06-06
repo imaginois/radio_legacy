@@ -9,7 +9,7 @@ define([
 
 	var tpl = new dom();
 	var container = $(cfg.app.mainContainerSelector);
-            // var tplLandingPage = require(['js/template/landingPage']);
+
 	var Section = {
 		init : function () {
 			var container = $(cfg.app.mainContainerSelector);
@@ -30,9 +30,7 @@ define([
 			// tpl.patch(container, vnode); 
     		log.info('Section Init Finished', Date.now());
 		},
-		activateSection : function (templateId, ctrl) {
-
-			// tpl.patch(container, tplLandingPage); 
+		acquire : function () {
             var modules,
                 first = arguments[0],
                 arrayRequest = false,
@@ -60,6 +58,15 @@ define([
             });
 
             return defer.promise;
+        },
+        activateSection : function (template, ctrl) {
+        	Section.acquire(template).then(function (section) {
+	        	tpl.patch(container, section.dom);
+	        	console.log(ctrl);
+	        	console.log(section.f);
+	        	section.f.load()
+	        	log.info("Activating section", template, 'Section data: ', section);
+        	});
         }
 	};
 

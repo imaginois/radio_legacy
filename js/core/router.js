@@ -101,13 +101,8 @@ define([
 
           route.onRefresh(function () {
             removeEventListeners();
-            console.log(route.templateId)
-            // var html = template.tmpl(route.templateId, ctrl);
-            // console.log(html)
             Section.activate('js/template/' + route.templateId, ctrl);
-          
             log.info("Route ", route.templateId, ctrl);
-          
             addEventListeners();
           });
 
