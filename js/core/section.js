@@ -3,13 +3,15 @@ define([
 	'js/lib/flyd',
   	'js/core/dom',
   	'js/core/navigation',
-	'js/helper/log'
+	'js/helper/log',
 ], function (cfg, radio, dom, navigation, log) {
 	'use strict'
-    
+
+	var tpl = new dom();
+	var container = $(cfg.app.mainContainerSelector);
+            // var tplLandingPage = require(['js/template/landingPage']);
 	var Section = {
 		init : function () {
-			var tpl = new dom();
 			var container = $(cfg.app.mainContainerSelector);
 
 			var vnode = tpl.h('div#view.wrapper.clearfix', [
@@ -29,37 +31,35 @@ define([
     		log.info('Section Init Finished', Date.now());
 		},
 		activateSection : function (templateId, ctrl) {
-            var tplLandingPage = require(['js/template/landingPage']);
-            console.log("tplLandingPage", tplLandingPage);
 
+			// tpl.patch(container, tplLandingPage); 
+            var modules,
+                first = arguments[0],
+                arrayRequest = false,
+                defer = Q.defer();
 
-            // var modules,
-            //     first = arguments[0],
-            //     arrayRequest = false,
-            //     defer = Q.defer();
+            if (Array.isArray(first)) {
+                modules = first;
+                arrayRequest = true;
+            } else {
+                modules = Array.prototype.slice.call(arguments, 0);
+            }
 
-            // if (Array.isArray(first)) {
-            //     modules = first;
-            //     arrayRequest = true;
-            // } else {
-            //     modules = Array.prototype.slice.call(arguments, 0);
-            // }
+            require(modules, function () {
+                var args = arguments;
 
-            // require(modules, function () {
-            //     var args = arguments;
+                setTimeout(function () {
+                    if (args.length > 1 || arrayRequest) {
+                        defer.resolve(Array.prototype.slice.call(args, 0));
+                    } else {
+                        defer.resolve(args[0]);
+                    }
+                }, 1);
+            }, function (err) {
+                defer.reject(err);
+            });
 
-            //     setTimeout(function () {
-            //         if (args.length > 1 || arrayRequest) {
-            //             defer.resolve(Array.prototype.slice.call(args, 0));
-            //         } else {
-            //             defer.resolve(args[0]);
-            //         }
-            //     }, 1);
-            // }, function (err) {
-            //     defer.reject(err);
-            // });
-
-            // return defer.promise;
+            return defer.promise;
         }
 	};
 

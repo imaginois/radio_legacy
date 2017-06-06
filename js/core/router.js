@@ -104,7 +104,7 @@ define([
             console.log(route.templateId)
             // var html = template.tmpl(route.templateId, ctrl);
             // console.log(html)
-            Section.activate(route.templateId, ctrl);
+            Section.activate('js/template/' + route.templateId, ctrl);
           
             log.info("Route ", route.templateId, ctrl);
           

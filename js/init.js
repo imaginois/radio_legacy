@@ -14,6 +14,10 @@ require.config({
     paths: {
         vendor: 'bower_components',
         // node_modules: '../node_modules'
+        // q: 'js/lib/q',
+    },
+    shim: {
+        // 'js/lib/q-xhr': ['js/lib/q']
     },
 	waitSeconds: 60,
 	urlArgs: function(id, url) {
@@ -30,7 +34,9 @@ require.config({
 // Start the main app logic.
 require([
     'js/core/manager',
-    'js/helper/base'
+    'js/helper/base',
+    'js/lib/q',
+    'js/lib/q-xhr'
 ], function (manager, base) {
     "use strict";
 
