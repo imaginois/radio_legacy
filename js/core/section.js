@@ -6,9 +6,9 @@ define([
 	'js/helper/log'
 ], function (cfg, radio, dom, navigation, log) {
 	'use strict'
-
-	function Section () {
-    	function init() {
+    
+	var Section = {
+		init : function () {
 			var tpl = (new dom()).dom;
 			var container = $(cfg.app.mainContainerSelector);
 
@@ -27,10 +27,15 @@ define([
 			]);
 			tpl.patch(container, vnode); 
     		log.info('Section Init Finished', Date.now());
-    	}
+		},
+		activateSection : function (templateId, ctrl) {
+			log.info("activate section", templateId, ' with controller ', ctrl)
+		}
+	};
 
-    	init();
-	}
-    
-  return Section();
+	Section.init();
+
+	return {
+		activate : Section.activateSection
+	};
 });

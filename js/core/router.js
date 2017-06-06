@@ -1,11 +1,13 @@
 define([
-	'js/config',
+  'js/config',
+	'js/core/section',
   'js/helper/base',
-	'js/helper/log'
-], function (cfg, base, log) {
+  'js/helper/log',
+], function (cfg, Section, base, log ) {
 	'use strict';
   
-	function Router () {
+  function Router () {
+      // var section = new Section();
       var routes = {};
       var el = $(cfg.app.mainContainerSelector);
 
@@ -99,9 +101,13 @@ define([
 
           route.onRefresh(function () {
             removeEventListeners();
+            // console.log(section)
             // var html = template.tmpl(route.templateId, ctrl);
             // console.log(html)
+            Section.activate(route.templateId, ctrl);
+          
             log.info("Route ", route.templateId, ctrl);
+          
             addEventListeners();
           });
 
