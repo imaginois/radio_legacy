@@ -6,6 +6,7 @@ define([], function () {
 		app : {
 			mainContainerSelector : "#view.main-container",
 			mainWrapperSelector : ".main"
-		}
+		},
+		defaultProviderURL: "http://localhost:4001"
 	};
 });

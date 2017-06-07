@@ -13,11 +13,11 @@ require.config({
     */
     paths: {
         vendor: 'bower_components',
-        npm: '../node_modules'
-        // q: 'js/lib/q',
+        npm: '../node_modules',
+        q: 'js/lib/q',
     },
     shim: {
-        // 'js/lib/q-xhr': ['js/lib/q']
+        'js/lib/q-xhr': ['js/lib/q']
     },
 	waitSeconds: 60,
 	urlArgs: function(id, url) {
