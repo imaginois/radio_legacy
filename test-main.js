@@ -35,7 +35,7 @@ require.config({
   baseUrl: '/base',
   paths: {
       vendor: 'bower_components',
-      // node_modules: '../node_modules'
+      npm: '../node_modules'
   },
   // dynamically load all test files
   deps: allTestFiles,

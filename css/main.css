@@ -354,7 +354,7 @@ nav a:hover {
 
 
 .selected {
-  background: red;
+  background: red !important;
 }
 
 

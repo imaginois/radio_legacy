@@ -8,26 +8,10 @@ define([
 	'use strict'
 
 	var tpl = new dom();
-	var container = $(cfg.app.mainContainerSelector);
+	var container = $(cfg.app.mainWrapperSelector);
 
 	var Section = {
 		init : function () {
-			var container = $(cfg.app.mainContainerSelector);
-
-			var vnode = tpl.h('div#view.wrapper.clearfix', [
-			  	tpl.h('aside', [
-			  		tpl.h('h3', ['Snabbdom That awkward Moment full movie'])
-		  		]),	
-		  		tpl.h('article.stripes', [
-		  			tpl.h('section#continuewatching.clearfix', [
-				  		tpl.h('header', [tpl.h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']),
-				  		tpl.h('article', [tpl.h('div.items',[
-													tpl.h('div.image-wrapper', ['<img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />'])
-												])]),
-		  			]),
-		  		]),
-			]);
-			// tpl.patch(container, vnode); 
     		log.info('Section Init Finished', Date.now());
 		},
 		acquire : function () {
@@ -61,9 +45,8 @@ define([
         },
         activateSection : function (template, ctrl) {
         	Section.acquire(template).then(function (section) {
+        		container.innerHTML = '';
 	        	tpl.patch(container, section.dom);
-	        	console.log(ctrl);
-	        	console.log(section.f);
 	        	section.f.load()
 	        	log.info("Activating section", template, 'Section data: ', section);
         	});

@@ -10,12 +10,31 @@ define(function (require) {
 	  require('vendor/snabbdom/dist/snabbdom-eventlisteners').default, // attaches event listeners 
 	]);
 	var h = require('vendor/snabbdom/dist/h').default; // helper function for creating vnodes 
-	 
+	
+	var components = {
+		stripe : function (id) {
+			return ['section#'+id+'.clearfix', [
+		  			h('header', components.stripeHeader()),
+		  			h('article', components.stripeContent()),
+  				]];
+		},
+		stripeHeader : function (id) {
+			return [ h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']
+		},
+		stripeContent : function (id) {
+			var items = [ h('div.image-wrapper', [h('img')] ) ];
+			return [ h('div.items', items)];
+		},
+		sidebar : function (id) {
+			return ['aside', [ h('h3', ['Snabbdom That awkward Moment full movie']) ]];
+		},
+	} 
 
 	function Dom () {
 		this.tpl = snabbdom;
 		this.patch = patch;
 		this.h = h;
+		this.c = components;
 	}
     
     return Dom;

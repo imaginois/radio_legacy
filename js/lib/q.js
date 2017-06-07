@@ -1114,12 +1114,7 @@ resetUnhandledRejections();
  */
 Q.reject = reject;
 function reject(reason) {
-    if(typeof reason === 'string' || typeof reason === 'boolean'){
-        console.error(reason);
-    }else{
-        console.error(reason.data);
-    }
-
+    console.error(reason);
 
     var rejection = Promise({
         "when": function (rejected) {

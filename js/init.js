@@ -13,7 +13,7 @@ require.config({
     */
     paths: {
         vendor: 'bower_components',
-        // node_modules: '../node_modules'
+        npm: '../node_modules'
         // q: 'js/lib/q',
     },
     shim: {

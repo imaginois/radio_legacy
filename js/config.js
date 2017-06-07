@@ -4,7 +4,8 @@ define([], function () {
 		DEBUG_LEVEL : 2, // 0 - no logs, 1 - error logs, 2 - warn logs, 3 - info logs
 		LOCAL : true,
 		app : {
-			mainContainerSelector : "#view"
+			mainContainerSelector : "#view.main-container",
+			mainWrapperSelector : ".main"
 		}
 	};
 });
