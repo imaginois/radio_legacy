@@ -22,7 +22,7 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
     preprocessors: {
       'js/core/**/*.js': ['coverage'],
-      'js/helper/!(log|remoteDebug)*.js': ['coverage'], //exclude the debuggers
+      'js/helper/!(log|remoteDebug|base)*.js': ['coverage'], //exclude the debuggers
     },
     concurrency: Infinity,
     coverageReporter: {
