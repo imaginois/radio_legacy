@@ -12,7 +12,7 @@ var browserSync = require('browser-sync').create();
 /*
 Default task.
  */
-gulp.task('default', ['test', 'clean', 'scripts']);
+gulp.task('default', ['test', 'clean', 'scripts', 'docs']);
 gulp.task('docs', ['docs-md', 'docs-html']);
 gulp.task('watch', ['tdd', 'browser-sync']);
 
@@ -66,14 +66,14 @@ Generating docs
  */
 gulp.task('docs-html', function () {
   // Generating README documentation
-  return gulp.src('js/**/*.js')
+  return gulp.src(['js/**/*.js', '!js/lib/*.js'])
     .pipe(gulpDocumentation('html'))
     .pipe(gulp.dest('docs'));
 });
 
 gulp.task('docs-md', function () {
   // Generating README documentation
-  return gulp.src('js/**/*.js')
+  return gulp.src(['js/**/*.js', '!js/lib/*.js'])
     .pipe(gulpDocumentation('md'))
     .pipe(gulp.dest('.'));
 });

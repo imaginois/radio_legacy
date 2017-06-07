@@ -22,7 +22,7 @@ define(function (require) {
   				]];
 		},
 		stripeHeader : function (id) {
-			return [ h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']
+			return [ h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching'];
 		},
 		stripeContent : function (id) {
 			provider.getContinueWatching();
@@ -47,7 +47,7 @@ define(function (require) {
 		sidebar : function (id) {
 			return ['aside', [ h('h3', ['Snabbdom That awkward Moment full movie']) ]];
 		},
-	} 
+	};
 
 	function Dom () {
 		this.tpl = snabbdom;

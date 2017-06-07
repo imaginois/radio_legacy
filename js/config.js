@@ -1,4 +1,5 @@
 define([], function () {
+  'use strict';
     return {
 		DEBUG : true,
 		DEBUG_LEVEL : 2, // 0 - no logs, 1 - error logs, 2 - warn logs, 3 - info logs

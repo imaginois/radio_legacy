@@ -61,7 +61,7 @@ define([
                 return Q.xhr.post(params.url, params.data).then(resolve, reject, notify);
             });
         };
-    };
+    }
 
     return new Http();
 });

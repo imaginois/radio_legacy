@@ -28,8 +28,8 @@ define([
 		 * Multiple instances of the app can run different
 		 * instances of the routes object
 		 */
-		function setRoutes (routes) {
-			var routes = routes || defaultRoutes;
+		function setRoutes (routesObj) {
+			var routes = routesObj || defaultRoutes;
 			routes.map(addRoute);
 		}
 

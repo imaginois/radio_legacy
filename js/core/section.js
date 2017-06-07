@@ -5,7 +5,7 @@ define([
   	'js/core/navigation',
 	'js/helper/log',
 ], function (cfg, radio, dom, navigation, log) {
-	'use strict'
+	'use strict';
 
 	var tpl = new dom();
 	var container = $(cfg.app.mainWrapperSelector);
@@ -47,7 +47,7 @@ define([
         	Section.acquire(template).then(function (section) {
         		container.innerHTML = '';
 	        	tpl.patch(container, section.dom);
-	        	section.f.load()
+	        	section.f.load();
 	        	log.info("Activating section", template, 'Section data: ', section);
         	});
         }

@@ -1,7 +1,9 @@
 define(function (require) {
 	'use strict';
-	var tpl = new (require('js/core/dom'));
+	var dom = require('js/core/dom');
 	var cfg = require('js/config');
+
+	var tpl = new dom();
 	
 	var sectionConfig = {
 		name : "Home",
@@ -19,10 +21,10 @@ define(function (require) {
 		load : function () {
 			console.log("404 page not found");
 		}
-	}
+	};
     
     return {
     	dom : template,
     	f   : methods
-    }
+    };
 });

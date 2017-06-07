@@ -4,7 +4,7 @@ define([
   	'js/core/manager',
 	'js/helper/log'
 ], function (cfg, radio, manager, log) {
-	'use strict'
+	'use strict';
 
 	function Navigation () {
     	function init() {

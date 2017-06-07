@@ -40,8 +40,8 @@ define([
        * @param  {object} controller JS object to act as a controller for the given view 
        * @return {void}            [description]
        */
-      function route (path, templateId, controller) {
-      	var controller = controller || new Function();
+      function route (path, templateId, ctrl) {
+      	var controller = ctrl || new Function();
 
         if (typeof templateId === 'function') {
           controller = templateId;

@@ -16,7 +16,6 @@ define(function (require) {
 		return http.get('continueWatching', {
                 showAdultContent: false
             }).then(function (response) {
-                console.log(response)
                 return {
                     raw: []
                 };
@@ -28,11 +27,11 @@ define(function (require) {
             posters: [],
             raw: []
         };
-    };
+    }
 
 	function Provider () {
-		this.url = cfg.defaultProviderURL
-		this.getContinueWatching = getContinueWatching
+		this.url = cfg.defaultProviderURL;
+		this.getContinueWatching = getContinueWatching;
 	}
     
     return Provider;

@@ -1,8 +1,9 @@
 define(function (require) {
 	'use strict';
 
-	var tpl = new (require('js/core/dom'));
-	
+	var dom = new require('js/core/dom');
+
+	var tpl = new dom();	
 
 	var template = tpl.h('div#view.wrapper.clearfix', [
 	  	tpl.h('aside', [
@@ -22,10 +23,10 @@ define(function (require) {
 		load : function () {
 			console.log("EPG load function called");
 		}
-	}
+	};
     
     return {
     	dom : template,
     	f   : methods
-    }
+    };
 });
