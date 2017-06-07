@@ -27,6 +27,7 @@ define(function (require) {
 		stripeContent : function (id) {
 			console.log("provider", provider);
 			provider.getContinueWatching();
+			console.log('called');
 			var items = [ 
 							h('div.image-wrapper.s', [
 								h('img.image', { props : {

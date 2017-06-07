@@ -24,6 +24,13 @@
         view.appendChild(continuewatching);
       });
 
+      it("should navigate to #", function () {
+        window.location.hash = '#/home';
+        console.log('here')
+        expect(router.router()).toBeTruthy();
+      });
+
+
       it("should navigate to #/epg", function () {
         window.location.hash = '#/epg';
         expect(router.router()).toBeTruthy();
