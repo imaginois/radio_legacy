@@ -20,8 +20,6 @@
     "font-awesome": "^4.7.0",
     "snabbdom": "^0.6.7",
     "flyd": "^0.2.3",
-    "q": "1.5.0",
-    "q-xhr": "^1.1.0"
   },
   "devDependencies": {
     "q": "^2.0.2"
