@@ -22,7 +22,22 @@ define(function (require) {
 			return [ h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']
 		},
 		stripeContent : function (id) {
-			var items = [ h('div.image-wrapper', [h('img')] ) ];
+			var items = [ 
+							h('div.image-wrapper.s', [
+								h('img.image', { props : {
+											src : 'http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg'
+										} 
+								}),
+								h('div.poster-title', ['Lorem ipsum'])
+							]),
+							h('div.image-wrapper.s', [
+								h('img.image', { props : {
+											src : 'http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg'
+										} 
+								}),
+								h('div.poster-title', ['Lorem ipsum'])
+							]),
+						];
 			return [ h('div.items', items)];
 		},
 		sidebar : function (id) {
