@@ -5,10 +5,13 @@ define([
 	'use strict';
 	
 	return [
-		['/', 'home'],
+		['/', 'home', function () {
+			console.log('going home')
+		}],
 		['/asset', 'asset', function () {
   			this.heading = 'I\'m page two!';
   			log.info("load Asset");
+  			console.log('asset')
 		}],
 
 		['/epg', 'epg', function () {

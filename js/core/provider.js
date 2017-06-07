@@ -13,7 +13,7 @@ define(function (require) {
 	}
 
 	function getContinueWatching() {
-		return http.get('getContinueWatching', {
+		return http.get('continueWatching', {
                 showAdultContent: false
             }).then(function (response) {
                 console.log(response)

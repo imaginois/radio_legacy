@@ -20,7 +20,7 @@ define([
     };
 
     function Http() {
-        this.url = 'http://localhost:4001/';
+        this.url = 'http://localhost:6002/';
 
         this.setParams = function (arr) {
             return {
