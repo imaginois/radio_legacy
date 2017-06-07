@@ -22,6 +22,10 @@ define([
     function Http() {
         this.url = 'http://localhost:6002/';
 
+        /**
+         * Sets parameters for XHR requst
+         * @param {Array} arr Array of requst's parameters
+         */
         this.setParams = function (arr) {
             return {
                 url: (isSet(arr[0]) && !isEmpty(arr[0]) ? this.url + arr[0] : null),
@@ -29,9 +33,13 @@ define([
             };
         };
 
+        /**
+         * Makes new GET xhr request
+         * @return {Promise} Generic Q.js promise object
+         * @example http.get('continueWatching').then(successHandler, failHandler);
+         */
         this.get = function () {
             var params = this.setParams([].slice.call(arguments, 0));
-
             if (null === params.url) {
                 return Q.reject(reasons.url);
             }
@@ -45,6 +53,10 @@ define([
             });
         };
 
+        /**
+         * Makes new POST xhr request
+         * @return {Promise} Generic Q.js promise object
+         */
         this.post = function () {
             var params = this.setParams([].slice.call(arguments, 0));
 

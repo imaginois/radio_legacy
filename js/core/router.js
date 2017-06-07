@@ -93,6 +93,7 @@ define([
         if(url.indexOf('/') < 0) {
           url = '/' + url;
         }
+
         var route = routes[url] || routes['*']
         
         /* istanbul ignore else  */
@@ -109,6 +110,8 @@ define([
           ctrl.$refresh();
         
           return true;
+        } else {
+          return false;
         }
       }
 
