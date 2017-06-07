@@ -1,6 +1,9 @@
 (function () {
   'use strict';
   define(['js/core/router', 'js/core/manager'], function (router, manager) {
+    beforeEach(function () {
+      // console.log('before each inside the define block');
+    })
 
     describe("Router.js missing dom elements", function () {
     

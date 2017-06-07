@@ -50,11 +50,12 @@ define([
         var listeners = [];
         // console.log(events)
         Object.defineProperty(controller.prototype, '$on', {
-          value: events.on
+          value   : events.on,
+          writable: true
         });
         Object.defineProperty(controller.prototype, '$refresh', {
-          value: this.events.refresh.bind(this, listeners), 
-          writable : true
+          value   : this.events.refresh.bind(this, listeners), 
+          writable: true
         });
         routes[path] = {templateId: templateId, controller: controller, onRefresh: listeners.push.bind(listeners)};
       }
@@ -102,7 +103,9 @@ define([
 
           route.onRefresh(function () {
             removeEventListeners();
-            Section.activate('js/template/' + route.templateId, ctrl);
+            if (route.templateId) {
+              Section.activate('js/template/' + route.templateId, ctrl);
+            }
             log.info("Route ", route.templateId, ctrl);
             addEventListeners();
           });

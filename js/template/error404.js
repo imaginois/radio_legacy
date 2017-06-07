@@ -12,8 +12,8 @@ define(function (require) {
 
 	var template = tpl.h(sectionConfig.selector, [
 		  	tpl.h.apply(tpl.h, tpl.c.sidebar()),
-			tpl.h('article.stripes', [
-		  		tpl.h.apply(tpl.h, tpl.c.stripe('continuewatching'))
+			tpl.h('article.error', [
+		  		'404 page not found'
 			])
 		]);
 
