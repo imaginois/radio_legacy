@@ -142,8 +142,6 @@ nav a:hover {
 }
 
 .main aside {
-    display: none;
-
     color: white;
     padding:0.2em 0.8em 0.5em;
     margin-bottom: 4px;
@@ -436,8 +434,8 @@ nav a:hover {
    ============ */
 
     .main article {
-        /* float: right; */
-        width: 100%;
+        float: right;
+        width: 65%;
         overflow: hidden;
     }
 
