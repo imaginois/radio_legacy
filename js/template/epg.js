@@ -14,7 +14,7 @@ define(function (require) {
 
 	var methods = {
 		show : function () {
-			console.log("Home page show function called");
+			console.log("EPG page show function called");
 		},
 		init : function function_name(argument) {
 			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching')]).then(function (result) {

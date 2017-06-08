@@ -17,11 +17,11 @@ define(function (require) {
 			console.log("Error page show function called");
 		},
 		init : function function_name(argument) {
-			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching')]).then(function (result) {
+			return Q.all([tpl.c.sidebar()]).then(function (result) {
 				var result = tpl.h(sectionConfig.selector, [
 					  	tpl.h.apply(tpl.h, result[0]),
 						tpl.h('article.stripes', [
-					  		tpl.h.apply(tpl.h, result[1])
+					  		tpl.h('div.error-message', ["The page you are looking for is not here :("])
 						])
 					]);
 				template.resolve({ data : result });
