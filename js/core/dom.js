@@ -54,7 +54,21 @@ define(function (require) {
 			});
 		},
 		sidebar : function (id) {
-			return ['aside', [ h('h3', ['Snabbdom That awkward Moment full movie']) ]];
+			return ['aside', [ 
+						h('h3', ['Snabbdom That awkward Moment full movie']),
+						h('p', [
+							h('iframe', { props : {
+												width : "100%",
+												height : "300px",
+												src : "https://www.youtube-nocookie.com/embed/ANZ2iX2w2H4?controls=0&amp;showinfo=0&amp;autoplay=0",
+												frameborder : 0,
+												allowfullscreen : undefined
+											}
+
+										})
+							])
+
+					]];
 		},
 	};
 
