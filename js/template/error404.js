@@ -2,29 +2,37 @@ define(function (require) {
 	'use strict';
 	var dom = require('js/core/dom');
 	var cfg = require('js/config');
-
-	var tpl = new dom();
 	
+	var tpl = new dom();
+
 	var sectionConfig = {
-		name : "Home",
-		selector : 'div.home' + cfg.app.mainWrapperSelector + '.wrapper.clearfix',
+		name : "Error",
+		selector : 'div.error' + cfg.app.mainWrapperSelector + '.wrapper.clearfix',
 	};
 
-	var template = tpl.h(sectionConfig.selector, [
-		  	tpl.h.apply(tpl.h, tpl.c.sidebar()),
-			tpl.h('article.error', [
-		  		'404 page not found'
-			])
-		]);
+	var template = Q.defer();
 
 	var methods = {
-		load : function () {
-			console.log("404 page not found");
+		show : function () {
+			console.log("Error page show function called");
+		},
+		init : function function_name(argument) {
+			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching')]).then(function (result) {
+				var result = tpl.h(sectionConfig.selector, [
+					  	tpl.h.apply(tpl.h, result[0]),
+						tpl.h('article.stripes', [
+					  		tpl.h.apply(tpl.h, result[1])
+						])
+					]);
+				template.resolve({ data : result });
+			});
 		}
 	};
     
+	methods.init();
+
     return {
-    	dom : template,
+    	dom : template.promise,
     	f   : methods
     };
 });

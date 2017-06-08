@@ -1,32 +1,38 @@
 define(function (require) {
 	'use strict';
-
-	var dom = new require('js/core/dom');
+	var dom = require('js/core/dom');
+	var cfg = require('js/config');
 	
 	var tpl = new dom();
 
-	var template = tpl.h('div#view.wrapper.clearfix', [
-	  	tpl.h('aside', [
-	  		tpl.h('h3', ['Snabbdom That awkward Moment full movie'])
-  		]),	
-  		tpl.h('article.stripes', [
-  			tpl.h('section#continuewatching.clearfix', [
-		  		tpl.h('header', [tpl.h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching']),
-		  		tpl.h('article', [tpl.h('div.items',[
-									tpl.h('div.image-wrapper', ['<img class="image" src="http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" alt="" />'])
-								])]),
-  			]),
-  		]),
-	]);
+	var sectionConfig = {
+		name : "Asset",
+		selector : 'div.asset' + cfg.app.mainWrapperSelector + '.wrapper.clearfix',
+	};
+
+	var template = Q.defer();
 
 	var methods = {
-		load : function () {
-			console.log("Asset load function called");
+		show : function () {
+			console.log("Asset page show function called");
+		},
+		init : function function_name(argument) {
+			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching')]).then(function (result) {
+				var result = tpl.h(sectionConfig.selector, [
+					  	tpl.h.apply(tpl.h, result[0]),
+						tpl.h('article.stripes', [
+					  		tpl.h.apply(tpl.h, result[1])
+						])
+					]);
+				template.resolve({ data : result });
+			});
 		}
 	};
     
+	methods.init();
+
     return {
-    	dom : template,
+    	dom : template.promise,
     	f   : methods
     };
 });

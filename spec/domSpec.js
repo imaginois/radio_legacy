@@ -22,13 +22,13 @@
       it("Should have sidebar component", function () {
           var tpl = new dom();
           var sidebar = tpl.c.sidebar();
-          expect(sidebar).toEqual(jasmine.any(Array));
+          expect(sidebar).toEqual(jasmine.any(Object));
       });
 
       it("Should have stripe continuewatching component", function () {
           var tpl = new dom();
           var stripe = tpl.c.stripe('continuewatching');
-          expect(stripe).toEqual(jasmine.any(Array));
+          expect(stripe).toEqual(jasmine.any(Object));
       });
 
     });
