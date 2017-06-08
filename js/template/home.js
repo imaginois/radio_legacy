@@ -10,21 +10,29 @@ define(function (require) {
 		selector : 'div.home' + cfg.app.mainWrapperSelector + '.wrapper.clearfix',
 	};
 
-	var template = tpl.h(sectionConfig.selector, [
-		  	tpl.h.apply(tpl.h, tpl.c.sidebar()),
-			tpl.h('article.stripes', [
-		  		tpl.h.apply(tpl.h, tpl.c.stripe('continuewatching'))
-			])
-		]);
+	var template = Q.defer();
 
 	var methods = {
-		load : function () {
-			console.log("Home page load function called");
+		show : function () {
+			console.log("Home page show function called");
+		},
+		init : function function_name(argument) {
+			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching')]).then(function (result) {
+				var result = tpl.h(sectionConfig.selector, [
+					  	tpl.h.apply(tpl.h, result[0]),
+						tpl.h('article.stripes', [
+					  		tpl.h.apply(tpl.h, result[1])
+						])
+					]);
+				template.resolve({ data : result });
+			});
 		}
 	};
     
+	methods.init();
+
     return {
-    	dom : template,
+    	dom : template.promise,
     	f   : methods
     };
 });

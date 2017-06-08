@@ -13,16 +13,14 @@ define(function (require) {
 	}
 
 	function getContinueWatching() {
-		return http.get('continueWatching', {
-                showAdultContent: false
-            }).then(function (response) {
-                return {
-                    raw: []
-                };
-            }, returnEmptyData);
+		var successHandler = function (response) {
+                return response.data;
+            }
+
+		return http.get('continueWatching').then(successHandler, failHandler);
 	}
 
-	function returnEmptyData () {
+	function failHandler () {
         return {
             posters: [],
             raw: []

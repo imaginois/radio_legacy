@@ -16,33 +16,42 @@ define(function (require) {
 
 	var components = {
 		stripe : function (id) {
-			return ['section#'+id+'.clearfix', [
-		  			h('header', components.stripeHeader()),
-		  			h('article', components.stripeContent()),
-  				]];
+			return Q.all([components.stripeHeader(), components.stripeContent()]).then(function (result) {
+					return result = ['section#'+id+'.clearfix', [
+			  			h('header', result[0]),
+			  			h('article', result[1]),
+	  				]];
+			});
 		},
 		stripeHeader : function (id) {
 			return [ h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching'];
 		},
 		stripeContent : function (id) {
-			provider.getContinueWatching();
-			var items = [ 
-							h('div.image-wrapper.s', [
-								h('img.image', { props : {
-											src : 'http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg'
-										} 
-								}),
-								h('div.poster-title', ['Lorem ipsum'])
-							]),
-							h('div.image-wrapper.s', [
-								h('img.image', { props : {
-											src : 'http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg'
-										} 
-								}),
-								h('div.poster-title', ['Lorem ipsum'])
-							]),
-						];
-			return [ h('div.items', items)];
+			// console.log(provider.getContinueWatching());
+			return provider.getContinueWatching().then(function (response) {
+				var items = [], i;
+				if (response) {
+					for (i = 0; i < response.length; i++) {
+						var img = response[i].poster;
+						var title = response[i].title;
+						var item = [];
+
+						item.push(
+									h('img.image', { props : {
+												src : img
+											} 
+									}),
+									h('div.poster-title', [title])
+								);
+
+						items.push(
+									h('div.image-wrapper.s', item)
+								);
+					}
+				}
+
+				return items;
+			});
 		},
 		sidebar : function (id) {
 			return ['aside', [ h('h3', ['Snabbdom That awkward Moment full movie']) ]];

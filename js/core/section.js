@@ -46,8 +46,10 @@ define([
         activateSection : function (template, ctrl) {
         	Section.acquire(template).then(function (section) {
         		container.innerHTML = '';
-	        	tpl.patch(container, section.dom);
-	        	section.f.load();
+                section.dom.then(function (vnode) {
+	        	  tpl.patch(container, vnode.data);
+	        	  section.f.show();
+                })
 	        	log.info("Activating section", template, 'Section data: ', section);
         	});
         }
