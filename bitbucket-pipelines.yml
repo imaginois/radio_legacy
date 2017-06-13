@@ -22,7 +22,6 @@ pipelines:
           - ls -la /opt/atlassian/pipelines/agent/build
           - find / -type d -name "node_modules" -ls
           - ls -la  /opt/atlassian/pipelines/agent/build/node_modules/.bin/
-          - docker run -d -p 6002:80 -v  /opt/atlassian/pipelines/agent/api/vstb.json:/data/db.json clue/json-server
           - npm install phantomjs -g
           - npm install bower -g
           - npm install gulp -g
@@ -30,5 +29,6 @@ pipelines:
           - npm install documentation -g
           - bower install --allow-root
           - yarn install
+          - gulp fakeApi
           - gulp
           - sh  /opt/atlassian/pipelines/agent/build/shell/rollbar_deployment_notification.sh
