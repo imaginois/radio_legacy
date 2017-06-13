@@ -19,6 +19,7 @@ define([
 			this.$on('#continuewatching', 'click', function () {
 				this.counter += 1;
 				this.$refresh();
+				console.log(this.counter);
 			}.bind(this));
 		}],
 		['*', 'error404', function (routeData) {

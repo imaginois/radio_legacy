@@ -16,19 +16,52 @@ define(function (require) {
 
 	var components = {
 		stripe : function (id) {
-			return Q.all([components.stripeHeader(), components.stripeContent()]).then(function (result) {
-					return result = ['section#'+id+'.clearfix', [
+			return Q.all([
+							components.stripeHeader(id), 
+							components.stripeContent(id),
+							components.stripeNav(id)
+						]).then(function (result) {
+
+					// append navigation elements
+					result[1] = result[1].concat(result[2]);
+
+					return ['section#'+id+'.clearfix', [
 			  			h('header', result[0]),
-			  			h('article', result[1]),
+			  			h('article.s', result[1])
 	  				]];
 			});
 		},
 		stripeHeader : function (id) {
-			return [ h('i.fa.fa-camera-retro fa-4x'), 'Keep Watching'];
+			var headerIcon;
+			switch (id) {
+				case 'continuewatching' :
+					headerIcon = 'i.fa.fa-camera-retro fa-4x';
+					break;
+				case 'newtitles' :
+					headerIcon = 'i.fa fa-bell fa-4x';
+					break;
+				case 'alltitles' :
+					headerIcon = 'i.fa fa-asterisk fa-4x';
+					break;
+			}
+			return [ h(headerIcon), id];
 		},
 		stripeContent : function (id) {
-			// console.log(provider.getContinueWatching());
-			return provider.getContinueWatching().then(function (response) {
+			var getStripeData;
+
+			switch (id) {
+				case 'continuewatching' :
+					getStripeData = provider.getContinueWatching();
+					break;
+				case 'newtitles' :
+					getStripeData = provider.getNewTitles();
+					break;
+				case 'alltitles' :
+					getStripeData = provider.getAllTitles();
+					break;
+			}
+
+			return getStripeData.then(function (response) {
 				var items = [], i;
 				if (response) {
 					for (i = 0; i < response.length; i++) {
@@ -37,10 +70,7 @@ define(function (require) {
 						var item = [];
 
 						item.push(
-									h('img.image', { props : {
-												src : img
-											} 
-									}),
+									h('img.image', { props : { src : img } }),
 									h('div.poster-title', [title])
 								);
 
@@ -52,6 +82,9 @@ define(function (require) {
 
 				return items;
 			});
+		},
+		stripeNav : function (id) {
+			return [ h('div.left.button-overlay', '<'),	h('div.right.button-overlay', '>') ];
 		},
 		sidebar : function (id) {
 			return ['aside', [ 

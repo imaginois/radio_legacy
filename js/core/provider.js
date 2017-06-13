@@ -12,12 +12,28 @@ define(function (require) {
 		// body...
 	}
 
-	function getContinueWatching() {
+	function getContinueWatching(index, size) {
 		var successHandler = function (response) {
                 return response.data;
             }
 
-		return http.get('continueWatching').then(successHandler, failHandler);
+		return http.get('continueWatching', { _page : (index || 0), _limit : (size || 6) } ).then(successHandler, failHandler);
+	}
+
+	function getNewTitles(index, size) {
+		var successHandler = function (response) {
+                return response.data;
+            }
+
+		return http.get('newTitles', { _page : (index || 0), _limit : (size || 6) } ).then(successHandler, failHandler);
+	}
+
+	function getAllTitles(index, size) {
+		var successHandler = function (response) {
+                return response.data;
+            }
+
+		return http.get('allTitles', { _page : (index || 0), _limit : (size || 6) } ).then(successHandler, failHandler);
 	}
 
 	function failHandler () {
@@ -28,8 +44,10 @@ define(function (require) {
     }
 
 	function Provider () {
-		this.url = cfg.defaultProviderURL;
+		this.url                 = cfg.defaultProviderURL;
 		this.getContinueWatching = getContinueWatching;
+		this.getNewTitles        = getNewTitles;
+		this.getAllTitles        = getAllTitles;
 	}
     
     return Provider;

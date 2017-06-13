@@ -45,6 +45,7 @@ define([
         },
         activateSection : function (template, ctrl) {
         	Section.acquire(template).then(function (section) {
+                container = $(cfg.app.mainWrapperSelector);
         		container.innerHTML = '';
                 section.dom.then(function (vnode) {
 	        	  tpl.patch(container, vnode.data);

@@ -17,11 +17,13 @@ define(function (require) {
 			console.log("Home page show function called");
 		},
 		init : function function_name(argument) {
-			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching')]).then(function (result) {
+			return Q.all([tpl.c.sidebar(), tpl.c.stripe('continuewatching'), tpl.c.stripe('newtitles'), tpl.c.stripe('alltitles')]).then(function (result) {
 				var result = tpl.h(sectionConfig.selector, [
 					  	tpl.h.apply(tpl.h, result[0]),
 						tpl.h('article.stripes', [
-					  		tpl.h.apply(tpl.h, result[1])
+					  		tpl.h.apply(tpl.h, result[1]),
+					  		tpl.h.apply(tpl.h, result[2]),
+					  		tpl.h.apply(tpl.h, result[3])
 						])
 					]);
 				template.resolve({ data : result });

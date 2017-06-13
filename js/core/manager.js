@@ -18,6 +18,13 @@ define([
  
 			window.dispatchEvent(new Event('ready'));
 			
+
+			setTimeout(function() {
+                Q.xhr.get('/api/' + 'PageDocumentReady?url=/webclient/index.html', {dataType: 'json'});
+            }.bind(this), 1500);
+
+
+
 			log.info('Manager Init Finished', Date.now());
 			log.info("radio Object Key sizes", log.expensiveKeys(radio));
 			// console.log("keysVsValues", log.keysVsValues(radio)); // need some work...
