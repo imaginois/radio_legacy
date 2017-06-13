@@ -27,9 +27,7 @@ pipelines:
           - npm install gulp -g
           - npm install karma -g
           - npm install documentation -g
-          - npm install json-server -g
           - bower install --allow-root
           - yarn install
-          - gulp fakeApi
           - gulp
           - sh  /opt/atlassian/pipelines/agent/build/shell/rollbar_deployment_notification.sh
