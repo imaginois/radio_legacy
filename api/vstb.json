@@ -8,6 +8,144 @@
     { "stripeName": "alltitles" },
     { "stripeName": "livetv" }
   ],
+  "continueWatching": [
+    { 
+      "poster": "http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" ,
+      "title": "Lorem ipsum dolor sit amet"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlGi1Z9Muxvxz2WyRaAfKbmVYCn3nH0vvaw_LU5pyvfMxVAmNB" ,
+      "title": "vitae dicta sunt explicabo"
+    },
+    { 
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjyD_W97_8VCTAqkGE1NX56S8d5783fKhT_-Q9wpDXR7HVsOjODQ" ,
+      "title": "quaerat voluptatem"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7_0toJHp2ECSTtR2LxUOK5r9MMnwJTIG0VcKquihFQmNT411UJw" ,
+      "title": "non numquam eius modi tempora"
+    },
+    { 
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5ZGvxU1Kw3dgjV-Vxi_u4DtoUy-qtn1bcmbeNbjBPnqLvxzqug" ,
+      "title": "minim veniam, quis nostrud"
+    },
+    { 
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRglxVWeeh8xfNIRM6nN6cDoaRfpSx8158MWzb7n2e9vnJKq_P6" ,
+      "title": "eos et accusamus et iusto odio"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3qP9OlkP6TaWRtO-RAj7J3JjFM9a8iJBtEcPWnXLbjXlWZrpB" ,
+      "title": "qui officia deserunt mollitia animi"
+    },
+    { 
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsnZBBXdhpf1_qCVu08sQh95unQ65UTabUs5QoLivkAcaj7PVFA" ,
+      "title": "dolorem ipsum"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTB83A4eeAEgcHIH0WBRcEcYoYWCRtbZ9rId1ZZHrLv6OoYoRIC4A" ,
+      "title": "voluptatem sequi nesciunt"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJAyk3csTXu1Oe7el5m2NnlKHxxXuq1GKCIJuBecpUMv75qnWpVg" ,
+      "title": "dolores eos qui"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQFSuckpbQWSw1JYryscwhYXt9L-PYN6sxl2Jds3MYe3HGwOgZ" ,
+      "title": "Duis aute irure"
+    }
+  ],
+  "newTitles": [
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlGi1Z9Muxvxz2WyRaAfKbmVYCn3nH0vvaw_LU5pyvfMxVAmNB" ,
+      "title": "vitae dicta sunt explicabo"
+    },
+    { 
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjyD_W97_8VCTAqkGE1NX56S8d5783fKhT_-Q9wpDXR7HVsOjODQ" ,
+      "title": "quaerat voluptatem"
+    },
+    { 
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsnZBBXdhpf1_qCVu08sQh95unQ65UTabUs5QoLivkAcaj7PVFA" ,
+      "title": "dolorem ipsum"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7_0toJHp2ECSTtR2LxUOK5r9MMnwJTIG0VcKquihFQmNT411UJw" ,
+      "title": "non numquam eius modi tempora"
+    },
+    { 
+      "poster": "http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" ,
+      "title": "Lorem ipsum dolor sit amet"
+    },
+    { 
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5ZGvxU1Kw3dgjV-Vxi_u4DtoUy-qtn1bcmbeNbjBPnqLvxzqug" ,
+      "title": "minim veniam, quis nostrud"
+    },
+    { 
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRglxVWeeh8xfNIRM6nN6cDoaRfpSx8158MWzb7n2e9vnJKq_P6" ,
+      "title": "eos et accusamus et iusto odio"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3qP9OlkP6TaWRtO-RAj7J3JjFM9a8iJBtEcPWnXLbjXlWZrpB" ,
+      "title": "qui officia deserunt mollitia animi"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQFSuckpbQWSw1JYryscwhYXt9L-PYN6sxl2Jds3MYe3HGwOgZ" ,
+      "title": "Duis aute irure"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTB83A4eeAEgcHIH0WBRcEcYoYWCRtbZ9rId1ZZHrLv6OoYoRIC4A" ,
+      "title": "voluptatem sequi nesciunt"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJAyk3csTXu1Oe7el5m2NnlKHxxXuq1GKCIJuBecpUMv75qnWpVg" ,
+      "title": "dolores eos qui"
+    }
+  ],
+  "allTitles": [
+    { 
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsnZBBXdhpf1_qCVu08sQh95unQ65UTabUs5QoLivkAcaj7PVFA" ,
+      "title": "dolorem ipsum"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7_0toJHp2ECSTtR2LxUOK5r9MMnwJTIG0VcKquihFQmNT411UJw" ,
+      "title": "non numquam eius modi tempora"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJAyk3csTXu1Oe7el5m2NnlKHxxXuq1GKCIJuBecpUMv75qnWpVg" ,
+      "title": "dolores eos qui"
+    },
+    { 
+      "poster": "http://netflixlife.com/files/2015/05/inglourious-basterds-.jpg" ,
+      "title": "Lorem ipsum dolor sit amet"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlGi1Z9Muxvxz2WyRaAfKbmVYCn3nH0vvaw_LU5pyvfMxVAmNB" ,
+      "title": "vitae dicta sunt explicabo"
+    },
+    { 
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjyD_W97_8VCTAqkGE1NX56S8d5783fKhT_-Q9wpDXR7HVsOjODQ" ,
+      "title": "quaerat voluptatem"
+    },
+    { 
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5ZGvxU1Kw3dgjV-Vxi_u4DtoUy-qtn1bcmbeNbjBPnqLvxzqug" ,
+      "title": "minim veniam, quis nostrud"
+    },
+    { 
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRglxVWeeh8xfNIRM6nN6cDoaRfpSx8158MWzb7n2e9vnJKq_P6" ,
+      "title": "eos et accusamus et iusto odio"
+    },
+    { 
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTQFSuckpbQWSw1JYryscwhYXt9L-PYN6sxl2Jds3MYe3HGwOgZ" ,
+      "title": "Duis aute irure"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3qP9OlkP6TaWRtO-RAj7J3JjFM9a8iJBtEcPWnXLbjXlWZrpB" ,
+      "title": "qui officia deserunt mollitia animi"
+    },
+    { 
+      "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTB83A4eeAEgcHIH0WBRcEcYoYWCRtbZ9rId1ZZHrLv6OoYoRIC4A" ,
+      "title": "voluptatem sequi nesciunt"
+    }
+  ],
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],

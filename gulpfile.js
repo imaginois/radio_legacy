@@ -17,8 +17,8 @@ gulp.task('default', ['test', 'clean', 'scripts', 'docs']);
 gulp.task('docs', ['docs-md', 'docs-html']);
 gulp.task('watch', ['tdd', 'browser-sync']);
 
-gulp.task('shorthand', shell.task([
-  'echo hello',
+gulp.task('fakeApi', shell.task([
+  'json-server api/vstb.json --port=6002',
   'echo world'
 ]))
 
