@@ -20,7 +20,7 @@ define([
     };
 
     function Http() {
-        this.url = 'http://localhost:6002/';
+        this.url = 'http://10.5.6.83:6002/';
 
         /**
          * Sets parameters for XHR requst
