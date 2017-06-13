@@ -7,6 +7,7 @@ var jshint = require('gulp-jshint');
 var del = require('del');
 var Server = require('karma').Server;
 var browserSync = require('browser-sync').create();
+var shell = require('gulp-shell')
 
 
 /*
@@ -15,6 +16,11 @@ Default task.
 gulp.task('default', ['test', 'clean', 'scripts', 'docs']);
 gulp.task('docs', ['docs-md', 'docs-html']);
 gulp.task('watch', ['tdd', 'browser-sync']);
+
+gulp.task('shorthand', shell.task([
+  'echo hello',
+  'echo world'
+]))
 
 gulp.task('scripts', function () {
 	return gulp.src(['js/**/*.js', '!js/**/*.min*'])
