@@ -8,7 +8,7 @@ define([], function () {
 			mainContainerSelector : "#view.main-container",
 			mainWrapperSelector : ".main"
 		},
-		defaultProviderURL: "http://10.5.6.83:6002/",
+		defaultProviderURL: "http://10.5.6.109:6002/",
 		KeySets: {
             "local": [
                 { 

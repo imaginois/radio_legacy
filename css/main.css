@@ -300,6 +300,10 @@ nav a:hover {
   right : 0;
   line-height: 26px;
   cursor: pointer;
+  color: #fff;
+  font-size:14px;
+  text-decoration: none;
+  line-height: 1.1em;
 }
 
 .image-wrapper:before {
@@ -361,6 +365,46 @@ nav a:hover {
 
 }
 
+
+/*temporary styles*/
+.full {
+  width : 100% !important;
+}
+
+.asset {
+  min-height: 400px
+}
+
+.houseOfCards .asset .title {
+  color : #4e4e4e ;  
+  display: block;
+} 
+
+.houseOfCards .trailer {
+  float : right;
+}
+
+.houseOfCards .cast {
+  float : left;
+  clear : both;
+  color : #666;
+  margin: 20px 0;
+}
+
+
+.houseOfCards .description {
+  font-size : 1.3em;
+  width : 60%;
+  float : left;
+  clear : both;
+  color : #555;
+  margin-bottom: 20px;
+}
+
+.houseOfCards {
+  transition: all 0.4s ease-in-out;
+  background: url('http://www.returndates.com/backgrounds/houseofcards.jpg') no-repeat center bottom;
+}
 
 /* ==========================================================================
    Media Queries

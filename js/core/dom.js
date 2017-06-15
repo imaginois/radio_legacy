@@ -71,7 +71,7 @@ define(function (require) {
 
 						item.push(
 									h('img.image', { props : { src : img } }),
-									h('div.poster-title', [title])
+									h('a.poster-title', { props : { href : '#/asset'} }, [title])
 								);
 
 						items.push(

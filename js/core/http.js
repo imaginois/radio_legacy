@@ -1,7 +1,6 @@
 define([
     'js/config'
 ], function (config) {
-
     'use strict';
 
     var reasons = {
