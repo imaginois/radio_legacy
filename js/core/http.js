@@ -1,6 +1,6 @@
 define([
-
-], function () {
+    'js/config'
+], function (config) {
 
     'use strict';
 
@@ -20,7 +20,7 @@ define([
     };
 
     function Http() {
-        this.url = 'http://10.5.6.83:6002/';
+        this.url = config.defaultProviderURL;
 
         /**
          * Sets parameters for XHR requst

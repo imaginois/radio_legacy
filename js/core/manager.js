@@ -2,10 +2,11 @@ define([
 	'js/config',
 	'module',
 	'js/core/router',
+	'js/core/dispatcher',
 	'js/helper/log',
 	'js/lib/flyd',
 	'js/conf/defaultRoutes',
-], function (cfg, module, router, log, radio, defaultRoutes) {
+], function (cfg, module, router, dispatcher, log, radio, defaultRoutes) {
 	'use strict';
 
 	function Manager () {

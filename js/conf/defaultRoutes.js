@@ -16,10 +16,10 @@ define([
 		['/epg', 'epg', function () {
 		    this.counter = 0;
   			this.heading = 'Hello EPG!';
-			this.$on('#continuewatching', 'click', function () {
+			this.$on('body', 'click', function () {
 				this.counter += 1;
 				this.$refresh();
-				console.log(this.counter);
+				console.log("click on continuewatching, counter", this.counter);
 			}.bind(this));
 		}],
 		['*', 'error404', function (routeData) {
