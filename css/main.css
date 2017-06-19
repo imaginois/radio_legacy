@@ -406,6 +406,29 @@ nav a:hover {
   background: url('http://www.returndates.com/backgrounds/houseofcards.jpg') no-repeat center bottom;
 }
 
+
+/*Error 404 page*/
+.error404 {
+  width:100%;
+}
+.fof {
+  margin: 10px 0;
+}
+
+.fof div {
+  text-align: center;
+  font-size:1.5em;
+}
+
+.fof canvas,
+.fof img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
