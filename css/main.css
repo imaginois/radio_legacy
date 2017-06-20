@@ -369,6 +369,7 @@ nav a:hover {
 /*temporary styles*/
 .full {
   width : 100% !important;
+  height: 100%
 }
 
 .asset {
@@ -401,12 +402,22 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
+.snowden,
+.got {
+  padding: 0;
+  width: 100% !important;
+  height: 800px;
+}
+
 .houseOfCards {
   transition: all 0.4s ease-in-out;
   background: url('http://www.returndates.com/backgrounds/houseofcards.jpg') no-repeat center bottom;
 }
 
-
+iframe {
+  border : 0;
+  overflow: hidden;
+}
 /*Error 404 page*/
 .error404 {
   width:100%;

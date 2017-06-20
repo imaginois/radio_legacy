@@ -12,6 +12,12 @@ define([
   			this.heading = 'I\'m page two!';
   			log.info("load Asset");
 		}],
+		['/snowden', 'snowden', function () {
+  			log.info("Snowden movie page");
+		}],
+		['/got', 'got', function () {
+  			log.info("got movie page");
+		}],
 
 		['/epg', 'epg', function () {
 		    this.counter = 0;
