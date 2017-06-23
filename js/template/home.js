@@ -35,6 +35,7 @@ define(function (require) {
 
     return {
     	dom : template.promise,
-    	f   : methods
+    	f   : methods,
+    	conf: sectionConfig
     };
 });

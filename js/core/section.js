@@ -53,9 +53,16 @@ define([
                 section.dom.then(function (vnode) {
 	        	  tpl.patch(container, vnode.data);
 	        	  section.f.show();
-                })
+                  Section.setActiveSection(section);
+                });
 	        	log.info("Activating section", template, 'Section data: ', section);
         	});
+        },
+        setActiveSection : function (activeSection) {
+            return cfg.activeSection = activeSection;
+        },
+        getActiveSection : function () {
+            return cfg.activeSection;
         }
 	};
 

@@ -1,16 +1,16 @@
 define([
 	'js/config',
 	'js/lib/flyd',
-  	'js/core/navigation',
   	'js/core/keycontroller',
 	'js/helper/log'
-], function (cfg, radio, navigation, Keycontroller, log) {
+], function (cfg, radio,  Keycontroller, log) {
 	'use strict';
 
 	function Dispatcher () {
 		
 		var mousemove = radio.stream();
 		var keypress = radio.stream();
+		var subscriptions = [];
 
 		document.addEventListener('mousemove', mousemove);
 		document.addEventListener('keydown', keypress);
@@ -20,7 +20,7 @@ define([
 
 			/* istanbul ignore next */
 			radio.on(function (mouseEvents) {
-				navigation.select(mouseEvents.target)
+				// trigger.select(mouseEvents.target)
 			}, mousemove);
 
 			/* istanbul ignore next */
@@ -31,8 +31,22 @@ define([
     		log.info('Dispatcher Init Finished', Date.now());
     	}
 
+    	function subscribe(events) {
+    		if(events.constructor !== Array) {
+    			throw new TypeError("The Event Subscriptions list must be an array");
+    		}
+
+    		events.map(function (event) {
+    			subscriptions.push(event);
+    		})
+    	}
+
     	function trigger(event) {
-    		console.log(event)
+    		return subscriptions.filter(function (subscription) {
+    			return subscription[event.name];
+    		}).map(function (subscribtion) {
+    			return subscribtion[event.name]();
+    		})
     	}
 
     	init();
@@ -40,9 +54,10 @@ define([
     	return {
     		mousemove : mousemove,
     		keypress  : keypress,
-    		trigger   : trigger
+    		trigger   : trigger,
+    		subscribe   : subscribe
     	}
 	}
     
-  return new Dispatcher();
+ 	return new Dispatcher();
 });
