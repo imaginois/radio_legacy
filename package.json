@@ -46,7 +46,7 @@
     "intern": "^4.0.0-alpha.4",
     "jasmine": "^2.6.0",
     "jshint": "^2.9.4",
-    "karma": "^1.7.0",
+    "karma": "^6.4.4",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-requirejs": "^1.1.0",
